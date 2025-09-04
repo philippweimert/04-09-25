@@ -1,4 +1,6 @@
 from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi.responses import FileResponse
+from starlette.staticfiles import StaticFiles
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from typing import Dict
@@ -15,6 +17,8 @@ from email.mime.multipart import MIMEMultipart
 
 
 ROOT_DIR = Path(__file__).parent
+PROJECT_ROOT = ROOT_DIR.parent
+FRONTEND_BUILD_DIR = PROJECT_ROOT / 'frontend' / 'build'
 load_dotenv(ROOT_DIR / '.env')
 
 # Portable in-memory data store (replaceable via adapter)
@@ -140,6 +144,39 @@ async def submit_contact_form(contact_data: ContactForm):
 
 # Include the router in the main app
 app.include_router(api_router)
+
+# Serve React build (if present) from the backend
+if FRONTEND_BUILD_DIR.exists():
+    static_dir = FRONTEND_BUILD_DIR / 'static'
+    if static_dir.exists():
+        app.mount('/static', StaticFiles(directory=str(static_dir)), name='static')
+
+    # Serve favicon and manifest directly if present
+    for asset_name in ['favicon.ico', 'manifest.json', 'asset-manifest.json', 'logo192.png', 'logo512.png']:
+        asset_path = FRONTEND_BUILD_DIR / asset_name
+        if asset_path.exists():
+            route_path = f'/{asset_name}'
+
+            @app.get(route_path)  # type: ignore[misc]
+            async def serve_asset(asset_path=asset_path):  # noqa: B902
+                return FileResponse(str(asset_path))
+
+    index_html_path = FRONTEND_BUILD_DIR / 'index.html'
+
+    @app.get('/')
+    async def serve_index_root():
+        return FileResponse(str(index_html_path))
+
+    # SPA fallback for client-side routes (must be after API routes)
+    @app.get('/{full_path:path}')
+    async def spa_fallback(full_path: str):
+        # Do not intercept API calls
+        if full_path.startswith('api'):
+            raise HTTPException(status_code=404, detail='Not Found')
+        return FileResponse(str(index_html_path))
+else:
+    logger = logging.getLogger(__name__)
+    logger.warning('Frontend build directory not found at %s. Static files will not be served.', FRONTEND_BUILD_DIR)
 
 app.add_middleware(
     CORSMiddleware,
