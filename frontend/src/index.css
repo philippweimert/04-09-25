@@ -2,6 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design Tokens and Base Styles */
+:root{
+  /* Farben */
+  --brand: #2E7BEA;
+  --text-strong: #111111;
+  --text: #222222;
+  --text-muted: #6B7280;
+  --bg: #FFFFFF;
+  --bg-subtle: #F7F7F8;
+  --border: #E5E7EB;
+
+  /* Radii & Schatten */
+  --radius: 8px; --radius-lg: 12px;
+  --shadow-1: 0 4px 12px rgba(0,0,0,.06);
+
+  /* Layout */
+  --container: 1200px; --gutter: 24px;
+
+  /* Tailwind color variables (HSL) */
+  --background: 0 0% 100%;
+  --foreground: 220 10% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 10% 13%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 220 10% 13%;
+  --primary: 216 82% 55%; /* #2E7BEA */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 210 20% 98%; /* subtle background */
+  --secondary-foreground: 220 10% 13%;
+  --muted: 210 20% 98%;
+  --muted-foreground: 220 9% 46%; /* ~#6B7280 */
+  --accent: 210 20% 98%;
+  --accent-foreground: 220 10% 13%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 214 32% 91%; /* ~#E5E7EB */
+  --input: 214 32% 91%;
+  --ring: 216 82% 55%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 339 81% 60%;
+}
+
+@layer base {
+  html { color-scheme: light; }
+  body { color: var(--text); background: var(--bg); }
+
+  h1 { font-weight: 600; font-size: clamp(2.25rem, 4.5vw, 3.5rem); line-height: 1.12; }
+  h2 { font-weight: 600; font-size: clamp(1.75rem, 3.2vw, 2.5rem); line-height: 1.18; }
+  h3 { font-weight: 600; font-size: clamp(1.375rem, 2.2vw, 1.75rem); line-height: 1.2; }
+  p, li { font-size: 1rem; line-height: 1.6; }
+  small, .text-meta { font-size: 0.875rem; line-height: 1.4; color: var(--text-muted); }
+}
+
+/* Layout rhythm */
+.section{ padding: 72px 0; }
+@media (max-width: 767px){ .section{ padding: 48px 0; } }
+.section--dense{ padding: 56px 0; }
+@media (max-width: 767px){ .section--dense{ padding: 40px 0; } }
+
+/* Container utility */
+.container{ max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* Content measure for readable line length */
+.measure{ max-width: 72ch; }
+.measure--narrow{ max-width: 60ch; }
+
+/* Card */
+.card{
+  background: var(--bg);
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.card:hover{ transform: translateY(-2px); box-shadow: var(--shadow-1); border-color: #DDD; }
+
+/* Buttons */
+.btn--primary{
+  background: var(--brand); color: #fff; border-radius: var(--radius);
+  padding: 12px 18px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center;
+}
+.btn--secondary{
+  background: transparent; color: var(--text); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px 18px; font-weight: 600;
+}
+.btn--tertiary{ color: var(--brand); font-weight: 600; text-underline-offset: 4px; }
+.btn--tertiary:hover{ text-decoration: underline; }
+.focus-ring-brand{ outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+
 body {
   margin: 0;
   font-family:

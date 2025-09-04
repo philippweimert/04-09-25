@@ -21,10 +21,10 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}
+      className={`w-full z-50 sticky top-0 transition-all duration-300 bg-white/90 backdrop-blur border-b border-neutral-200`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="flex items-center h-20">
+      <div className="container pt-1">
+        <div className="flex items-center h-16">
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
