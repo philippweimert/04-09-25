@@ -9,12 +9,12 @@ const ImprintPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-acencia">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      <div className="pt-28 bg-acencia">
+      <div className="section">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-acencia via-acencia-light to-acencia py-16 relative overflow-hidden">
+        <section className="relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <svg
               className="absolute top-20 right-0 w-96 h-96"
@@ -29,22 +29,19 @@ const ImprintPage = () => {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="text-center">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                <span className="text-orange-500">Impressum</span>
+              <h1 className="mb-6">
+                <span className="">Impressum</span>
               </h1>
             </div>
           </div>
         </section>
 
-        {/* Smooth transition from slate-900 to slate-100 */}
-        <div className="h-12 bg-gradient-to-b from-slate-900 to-slate-100"></div>
-
         {/* Imprint Content */}
-        <section className="bg-slate-100 py-16">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm space-y-8 text-sm leading-relaxed">
+        <section className="section bg-bg-subtle">
+          <div className="container">
+            <div className="bg-white rounded-lg p-8 border border-neutral-200 space-y-8 text-sm leading-relaxed">
               <div>
                 <h2 className="text-2xl font-bold text-slate-900 mb-6">
                   Allgemeine Daten
