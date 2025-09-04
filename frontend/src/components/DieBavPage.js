@@ -109,44 +109,44 @@ const DieBavPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-acencia">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      {/* Doubled spacing from header to first section */}
-      <div className="pt-32">
+      {/* Content */}
+      <div className="section">
         <HeroSection />
         <ThreeStepProcessSection />
 
         {/* Original die bAV content starts here */}
-        <div className="bg-gradient-to-b from-acencia via-acencia to-acencia-light py-16">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="section bg-bg-subtle">
+          <div className="container">
             <div className="max-w-5xl mx-auto">
               {/* Hero Section - kompakter */}
               <div className="text-center mb-12">
-                <h1 className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                  die <span className="text-acencia-orange">bAV</span>
+                <h1 className="mb-2">
+                  die <span className="">bAV</span>
                 </h1>
-                <p className="text-xs text-slate-400 mb-6 max-w-2xl mx-auto">
+                <p className="text-xs text-muted-foreground mb-6 max-w-2xl mx-auto">
                   Informationen aus dem Geschäftsbetrieb des
                   Versicherungsmaklers gemäß §93 HGB, keine Rechtsberatung,
                   keine Steuerberatung
                 </p>
-                <p className="text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                   Umfassende Informationen zur betrieblichen Altersvorsorge
                 </p>
               </div>
 
               {/* Definition der betrieblichen Altersvorsorge - jetzt volle Breite */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-12">
+              <div className="rounded-lg p-6 border border-neutral-200 bg-white mb-12">
                 <div className="flex items-center mb-4">
-                  <Shield className="w-6 h-6 text-acencia-orange mr-2" />
-                  <h2 className="text-lg font-semibold text-white">
+                  <Shield className="w-6 h-6 text-slate-600 mr-2" />
+                  <h2 className="text-lg font-semibold">
                     Was ist betriebliche Altersvorsorge?
                   </h2>
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
-                    <p className="text-slate-200 leading-relaxed text-sm mb-3">
+                    <p className="text-muted-foreground leading-relaxed text-sm mb-3">
                       Die betriebliche Altersvorsorge (bAV) ist eine Form der
                       privaten Altersvorsorge, die über den Arbeitgeber
                       organisiert wird. Sie ergänzt die gesetzliche Rente und
@@ -155,7 +155,7 @@ const DieBavPage = () => {
                     </p>
                   </div>
                   <div>
-                    <p className="text-slate-200 leading-relaxed text-sm">
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       Seit 2002 haben alle Arbeitnehmer einen Rechtsanspruch auf
                       betriebliche Altersvorsorge durch Entgeltumwandlung. Dabei
                       wird ein Teil des Bruttogehalts für die Altersvorsorge
@@ -169,26 +169,26 @@ const DieBavPage = () => {
               {/* Herausforderungen Ausklapp-Element */}
               <div id="herausforderungen" className="mb-12">
                 <div
-                  className="cursor-pointer bg-gradient-to-br from-red-600/20 to-red-700/20 rounded-2xl p-6 border border-red-500/30 hover:border-red-400/50 transition-all duration-300"
+                  className="cursor-pointer rounded-lg p-6 border border-neutral-200 bg-white transition-colors"
                   onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-xl flex items-center justify-center">
-                        <AlertTriangle className="w-6 h-6 text-white" />
+                      <div className="w-12 h-12 bg-neutral-100 rounded-xl flex items-center justify-center">
+                        <AlertTriangle className="w-6 h-6 text-slate-600" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white mb-1">
+                        <h3 className="text-xl font-semibold mb-1">
                           bAV-Verwaltung ist komplex, zeitaufwendig und
                           fehleranfällig
                         </h3>
-                        <p className="text-slate-300 text-sm">
+                        <p className="text-muted-foreground text-sm">
                           Klicken Sie hier, um die Herausforderungen und unsere
                           Lösungen zu sehen
                         </p>
                       </div>
                     </div>
-                    <div className="text-white">
+                    <div className="text-slate-700">
                       {isChallengesExpanded ? (
                         <ChevronUp className="w-6 h-6" />
                       ) : (

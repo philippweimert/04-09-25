@@ -140,37 +140,34 @@ const DieBavPageX = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      {/* Doubled spacing from header */}
-      <main className="pt-56">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Content */}
+      <main className="section">
+        <div className="container">
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
+              <div className="inline-flex items-center px-6 py-3 bg-neutral-100 rounded-full text-slate-700 text-sm font-medium mb-8">
                 <Building2 className="w-5 h-5 mr-2" />
                 Für Unternehmen
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                Betriebliche Altersvorsorge für{' '}
-                <span className="text-acencia-orange">Unternehmen</span>
-              </h1>
-              <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
+              <h1 className="mb-8">Betriebliche Altersvorsorge für Unternehmen</h1>
+              <p className="text-base text-muted-foreground leading-relaxed max-w-4xl mx-auto measure">
                 Warum bAV heute wichtiger ist denn je
               </p>
             </div>
 
             {/* Einleitung */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
+            <div className="rounded-lg p-8 border border-neutral-200 bg-white mb-16">
               <div className="flex items-center mb-6">
-                <Users className="w-8 h-8 text-acencia-orange mr-3" />
-                <h2 className="text-2xl font-semibold text-white">
+                <Users className="w-8 h-8 text-slate-600 mr-3" />
+                <h2 className="text-2xl font-semibold">
                   Bedeutung der bAV im Wettbewerb um Fachkräfte
                 </h2>
               </div>
-              <p className="text-slate-200 leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed mb-4">
                 In Zeiten des demografischen Wandels und des Fachkräftemangels
                 wird die betriebliche Altersvorsorge zu einem entscheidenden
                 Faktor im Wettbewerb um qualifizierte Mitarbeitende.
@@ -178,8 +175,8 @@ const DieBavPageX = () => {
                 verschaffen sich nicht nur einen Wettbewerbsvorteil, sondern
                 übernehmen auch gesellschaftliche Verantwortung.
               </p>
-              <p className="text-slate-200 leading-relaxed">
-                <strong className="text-white">
+              <p className="text-muted-foreground leading-relaxed">
+                <strong>
                   Gesetzliche Rahmenbedingungen:
                 </strong>{' '}
                 Die Berücksichtigung aktueller Gesetze und Verordnungen ist
@@ -197,12 +194,12 @@ const DieBavPageX = () => {
                   {/* Section Header */}
                   <div className="flex items-center mb-8">
                     <div
-                      className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center text-white mr-4 shadow-lg`}
+                      className={`w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center text-slate-700 mr-4`}
                     >
                       {section.icon}
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold text-white mb-2">
+                      <h2 className="text-3xl font-semibold mb-2">
                         {sectionIndex + 1}. {section.title}
                       </h2>
                     </div>
@@ -213,17 +210,17 @@ const DieBavPageX = () => {
                     {section.items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group"
+                        className="rounded-lg p-6 bg-white border border-neutral-200 group"
                       >
                         <div className="flex items-start space-x-4">
                           <div className="flex-shrink-0">
-                            <CheckCircle className="w-6 h-6 text-acencia-orange mt-1" />
+                            <CheckCircle className="w-6 h-6 text-slate-600 mt-1" />
                           </div>
                           <div className="flex-1">
-                            <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-acencia-orange transition-colors duration-300">
+                            <h3 className="text-lg font-semibold mb-3">
                               {item.title}
                             </h3>
-                            <p className="text-slate-200 leading-relaxed text-sm">
+                            <p className="text-muted-foreground leading-relaxed text-sm">
                               {item.description}
                             </p>
                           </div>
