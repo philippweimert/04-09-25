@@ -1,7 +1,7 @@
 from fastapi import FastAPI, APIRouter, HTTPException
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
-from motor.motor_asyncio import AsyncIOMotorClient
+from typing import Dict
 import os
 import logging
 from pathlib import Path
@@ -17,10 +17,23 @@ from email.mime.multipart import MIMEMultipart
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+# Portable in-memory data store (replaceable via adapter)
+# In production, swap this with a real persistence layer via environment-driven adapter pattern
+class InMemoryDatabase:
+    def __init__(self) -> None:
+        self.collections: Dict[str, list] = {
+            'status_checks': [],
+            'contact_submissions': [],
+        }
+
+    async def insert_one(self, collection_name: str, document: Dict) -> None:
+        self.collections.setdefault(collection_name, []).append(document)
+
+    async def find_all(self, collection_name: str, limit: int = 1000) -> list:
+        return list(self.collections.get(collection_name, []))[:limit]
+
+
+db = InMemoryDatabase()
 
 # Create the main app without a prefix
 app = FastAPI()
@@ -51,8 +64,8 @@ async def send_email(contact_data: ContactForm):
     try:
         # Create message
         msg = MIMEMultipart()
-        msg['From'] = "noreply@acencia.de"
-        msg['To'] = "philipp.weimert@acencia.de"
+        msg['From'] = os.environ.get("CONTACT_FROM", "noreply@example.com")
+        msg['To'] = os.environ.get("CONTACT_TO", "admin@example.com")
         msg['Subject'] = f"Neue Kontaktanfrage von {contact_data.name}"
 
         # Email body
@@ -73,19 +86,16 @@ Gesendet am: {datetime.now().strftime('%d.%m.%Y um %H:%M:%S')}
 
         msg.attach(MIMEText(body, 'plain', 'utf-8'))
 
-        # For now, we'll use a simple SMTP setup that would work with most providers
-        # In production, you would configure this with your actual SMTP settings
+        # For portability, we avoid provider-specific SMTP config here.
+        # In production, configure SMTP via environment variables and send securely.
+        # For now, we save to in-memory storage and log the content.
         
-        # Since we don't have SMTP credentials configured, we'll save to database instead
-        # and log the email content
-        
-        # Save contact form submission to database
+        # Save contact form submission to portable store
         contact_dict = contact_data.dict()
         contact_dict['id'] = str(uuid.uuid4())
         contact_dict['timestamp'] = datetime.utcnow()
         contact_dict['status'] = 'sent'
-        
-        await db.contact_submissions.insert_one(contact_dict)
+        await db.insert_one('contact_submissions', contact_dict)
         
         # Log the email content for now (in production, this would actually send)
         logger.info(f"Contact form submission: {body}")
@@ -105,12 +115,12 @@ async def root():
 async def create_status_check(input: StatusCheckCreate):
     status_dict = input.dict()
     status_obj = StatusCheck(**status_dict)
-    _ = await db.status_checks.insert_one(status_obj.dict())
+    await db.insert_one('status_checks', status_obj.dict())
     return status_obj
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
-    status_checks = await db.status_checks.find().to_list(1000)
+    status_checks = await db.find_all('status_checks', 1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
 @api_router.post("/contact")
@@ -145,4 +155,5 @@ logger = logging.getLogger(__name__)
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
-    client.close()
+    # No persistent client to close in in-memory mode
+    return None

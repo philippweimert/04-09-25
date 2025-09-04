@@ -30,8 +30,12 @@ next-env.d.ts
 dist/
 dist
 
-# Environment files (comprehensive coverage)
-
+# Environment files
+.env
+.env.*
+**/.env
+**/.env.*
+*.pem
 *token.json*
 *credentials.json*
 
@@ -44,22 +48,21 @@ dump.rdb
 
 # System files
 .DS_Store
-*.pem
+Thumbs.db
 
 # Python
 __pycache__/
-*pyc*
+*.pyc
 venv/
 .venv/
 
 # Development tools
-chainlit.md
-.chainlit
 .ipynb_checkpoints/
 .ac
 
 # Deployment
 .vercel
+.emergent/
 
 # Data and databases
 agenthub/agents/youtube/db
@@ -75,21 +78,3 @@ agenthub/agents/youtube/db
 
 # Build caches
 .cache/
-
-# Mobile development
-android-sdk/ -e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
--e 
-# Environment files
-*.env
-*.env.*
