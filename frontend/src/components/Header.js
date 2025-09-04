@@ -21,10 +21,10 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}
+      className={`w-full z-50 sticky top-0 transition-all duration-300 bg-white/90 backdrop-blur border-b border-neutral-200`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="flex items-center h-20">
+      <div className="container pt-1">
+        <div className="flex items-center h-16">
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
@@ -124,16 +124,16 @@ const Header = () => {
               >
                 <Link
                   to="/die-bav"
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-slate-700 hover:text-slate-900 transition-colors font-medium group py-2 text-base flex items-center"
                 >
                   <span>bAV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-slate-900 group-hover:w-full transition-all duration-200 ease-linear"></div>
                 </Link>
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                  className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg border border-neutral-200 py-2 transition-all duration-200 ${
                     isBavDropdownOpen
                       ? 'opacity-100 visible transform translate-y-0'
                       : 'opacity-0 invisible transform -translate-y-2'
@@ -141,19 +141,19 @@ const Header = () => {
                 >
                   <Link
                     to="/die-bav/x"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     Für Unternehmen
                   </Link>
                   <Link
                     to="/die-bav/y"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     Für Arbeitnehmer
                   </Link>
                   <Link
                     to="/die-bav/aktuelles"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     Aktuelles
                   </Link>
@@ -168,16 +168,16 @@ const Header = () => {
               >
                 <Link
                   to="/bkv"
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-slate-700 hover:text-slate-900 transition-colors font-medium group py-2 text-base flex items-center"
                 >
                   <span>bKV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-slate-900 group-hover:w-full transition-all duration-200 ease-linear"></div>
                 </Link>
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                  className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg border border-neutral-200 py-2 transition-all duration-200 ${
                     isBkvDropdownOpen
                       ? 'opacity-100 visible transform translate-y-0'
                       : 'opacity-0 invisible transform -translate-y-2'
@@ -185,13 +185,13 @@ const Header = () => {
                 >
                   <Link
                     to="/bkv/x"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     bKV Option X
                   </Link>
                   <Link
                     to="/bkv/y"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     bKV Option Y
                   </Link>
@@ -206,16 +206,16 @@ const Header = () => {
               >
                 <Link
                   to="/buv"
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-slate-700 hover:text-slate-900 transition-colors font-medium group py-2 text-base flex items-center"
                 >
                   <span>bUV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-slate-900 group-hover:w-full transition-all duration-200 ease-linear"></div>
                 </Link>
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                  className={`absolute top-full left-0 mt-2 w-48 bg-white rounded-lg border border-neutral-200 py-2 transition-all duration-200 ${
                     isBuvDropdownOpen
                       ? 'opacity-100 visible transform translate-y-0'
                       : 'opacity-0 invisible transform -translate-y-2'
@@ -223,13 +223,13 @@ const Header = () => {
                 >
                   <Link
                     to="/buv/x"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     bUV Option X
                   </Link>
                   <Link
                     to="/buv/y"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     bUV Option Y
                   </Link>
@@ -244,16 +244,16 @@ const Header = () => {
               >
                 <Link
                   to="/ueber-uns"
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-slate-700 hover:text-slate-900 transition-colors font-medium group py-2 text-base flex items-center"
                 >
                   <span>über uns</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-px bg-slate-900 group-hover:w-full transition-all duration-200 ease-linear"></div>
                 </Link>
 
                 {/* Dropdown Menu */}
                 <div
-                  className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                  className={`absolute top-full right-0 mt-2 w-48 bg-white rounded-lg border border-neutral-200 py-2 transition-all duration-200 ${
                     isAboutDropdownOpen
                       ? 'opacity-100 visible transform translate-y-0'
                       : 'opacity-0 invisible transform -translate-y-2'
@@ -261,13 +261,13 @@ const Header = () => {
                 >
                   <Link
                     to="/ueber-uns/service-team"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     Service-Team
                   </Link>
                   <Link
                     to="/kontakt"
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-neutral-50 transition-colors duration-150"
                   >
                     Kontakt
                   </Link>
@@ -397,7 +397,7 @@ const Header = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-orange-400 hover:bg-white/10 p-3 rounded-xl transition-all duration-300"
+              className="text-slate-700 hover:text-slate-900 hover:bg-neutral-50 p-3 rounded-lg transition-colors"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>

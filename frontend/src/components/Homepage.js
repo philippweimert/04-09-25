@@ -64,12 +64,12 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      {/* Moderne Interaktive Hero Section */}
-      <div className="pt-8">
-        <section className="min-h-[85vh] flex items-center relative overflow-hidden">
+      {/* Hero Section */}
+      <div className="section">
+        <section className="flex items-center relative overflow-hidden">
           {/* Erweiterte animierte Background Patterns */}
           <div className="absolute inset-0">
             {/* Floating animated shapes */}
@@ -113,21 +113,21 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               {/* Left Content - Hero Text */}
               <div className="text-left">
                 {/* Main Headline */}
-                <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+                <h1 className="mb-6">
                   <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">
                     Digital.
                   </span>{' '}
-                  <span className="text-white">Einfach.</span>{' '}
-                  <span className="text-slate-200">Modern.</span>
+                  <span>Einfach.</span>{' '}
+                  <span className="text-muted-foreground">Modern.</span>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="text-xl text-slate-300 mb-8 max-w-lg leading-relaxed">
+                <p className="text-lg text-muted-foreground mb-8 measure--narrow">
                   Automatisieren Sie Ihre betriebliche Altersvorsorge komplett
                 </p>
 
@@ -136,15 +136,15 @@ const Homepage = () => {
                   {benefits.map((benefit, index) => (
                     <div
                       key={index}
-                      className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                      className="group flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
                       style={{ animationDelay: `${index * 150}ms` }}
                     >
-                      <div className="w-8 h-8 bg-orange-500/20 backdrop-blur-sm border border-orange-400/50 rounded-full flex items-center justify-center group-hover:rotate-12 group-hover:bg-orange-400/30 group-hover:border-orange-400/70 transition-all duration-300 flex-shrink-0">
-                        <div className="text-orange-400 group-hover:text-orange-300 group-hover:scale-110 transition-all duration-300">
+                      <div className="w-8 h-8 bg-neutral-100 border border-neutral-200 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div className="text-slate-600">
                           {benefit.icon}
                         </div>
                       </div>
-                      <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">
+                      <span className="text-slate-700 font-medium">
                         {benefit.text}
                       </span>
                     </div>
@@ -160,19 +160,15 @@ const Homepage = () => {
                         '_blank',
                       )
                     }
-                    className="group bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg flex items-center justify-center space-x-2 relative overflow-hidden"
+                    className="btn--primary text-white text-base"
                   >
-                    {/* Subtle shimmer effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                    <span className="relative z-10">
-                      Jetzt kostenfrei starten
-                    </span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300 relative z-10" />
+                    <span>Jetzt kostenfrei starten</span>
+                    <ArrowRight className="w-5 h-5" />
                   </button>
 
                   <Link
                     to="/die-bav?autoplay=true"
-                    className="group bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
+                    className="btn--secondary text-base flex items-center justify-center gap-2"
                   >
                     <svg
                       className="w-5 h-5"

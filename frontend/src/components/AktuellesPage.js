@@ -154,12 +154,12 @@ const AktuellesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-acencia">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      <div className="pt-32 bg-acencia">
-        {/* Hero Section mit Hero-Design */}
-        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia py-20 relative overflow-hidden">
+      <div className="section">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
           {/* Background design similar to hero section */}
           <div className="absolute inset-0 opacity-[0.05]">
             <svg
@@ -189,15 +189,10 @@ const AktuellesPage = () => {
             <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-orange-400 rounded-full animate-pulse"></div>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="text-center mb-6">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
-                <span className="text-white">Aktuelles zur </span>
-                <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
-                  betrieblichen Altersvorsorge
-                </span>
-              </h1>
-              <p className="text-lg text-slate-200 max-w-4xl mx-auto leading-relaxed">
+              <h1 className="mb-6">Aktuelles zur betrieblichen Altersvorsorge</h1>
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed measure">
                 Bleiben Sie informiert über die neuesten Entwicklungen, Gesetze
                 und Trends in der bAV
               </p>
@@ -205,8 +200,8 @@ const AktuellesPage = () => {
           </div>
         </section>
 
-        {/* Filter und Content Section - erst hier Farbwechsel, reduziertes Padding */}
-        <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia-blue py-8 relative overflow-hidden">
+        {/* Filter und Content Section */}
+        <section className="section bg-bg-subtle relative overflow-hidden">
           {/* Subtle background elements */}
           <div className="absolute inset-0 opacity-[0.03]">
             <svg
@@ -233,9 +228,9 @@ const AktuellesPage = () => {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            {/* Filter Section - reduzierter Abstand */}
-            <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 mb-6 shadow-xl">
+          <div className="container relative z-10">
+            {/* Filter Section */}
+            <div className="rounded-2xl p-8 mb-6 border border-neutral-200 bg-white">
               <div className="flex flex-col md:flex-row gap-6 items-center">
                 {/* Search */}
                 <div className="flex-1 relative">
@@ -243,7 +238,7 @@ const AktuellesPage = () => {
                   <input
                     type="text"
                     placeholder="Artikel durchsuchen..."
-                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 transition-colors"
+                    className="w-full pl-10 pr-4 py-3 bg-white border border-neutral-300 rounded-xl text-slate-700 placeholder-slate-400 focus:outline-none focus:border-slate-500 transition-colors"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                   />
@@ -255,10 +250,10 @@ const AktuellesPage = () => {
                     <button
                       key={category}
                       onClick={() => setSelectedCategory(category)}
-                      className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                         selectedCategory === category
-                          ? 'bg-orange-500 text-white shadow-lg'
-                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+                          ? 'bg-slate-900 text-white'
+                          : 'bg-neutral-100 text-slate-700 hover:bg-neutral-200 hover:text-slate-900'
                       }`}
                     >
                       {category === 'alle' ? 'Alle Kategorien' : category}
@@ -278,7 +273,7 @@ const AktuellesPage = () => {
                   rel={article.url !== '#' ? 'noopener noreferrer' : ''}
                   className="block"
                 >
-                  <article className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer h-full">
+                  <article className="rounded-xl overflow-hidden border border-neutral-200 bg-white hover:bg-neutral-50 transition-colors cursor-pointer h-full">
                     <div className="aspect-w-16 aspect-h-9">
                       <img
                         src={article.image}
@@ -291,13 +286,13 @@ const AktuellesPage = () => {
                       {/* Category Badge */}
                       <div className="flex items-center gap-2 mb-3">
                         <span
-                          className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border ${getCategoryColor(article.category)}`}
+                          className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium border bg-neutral-100 text-slate-700 border-neutral-200`}
                         >
                           {getCategoryIcon(article.category)}
                           {article.category}
                         </span>
                         {article.url !== '#' && (
-                          <span className="inline-flex items-center gap-1 px-2 py-1 bg-blue-900/30 text-blue-300 text-xs rounded-full border border-blue-700">
+                          <span className="inline-flex items-center gap-1 px-2 py-1 bg-neutral-100 text-slate-700 text-xs rounded-full border border-neutral-200">
                             <ArrowRight className="w-3 h-3" />
                             Extern
                           </span>
@@ -305,17 +300,17 @@ const AktuellesPage = () => {
                       </div>
 
                       {/* Title - kleiner */}
-                      <h3 className="text-lg font-bold text-white mb-2 leading-tight hover:text-orange-400 transition-colors line-clamp-2">
+                      <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight line-clamp-2">
                         {article.title}
                       </h3>
 
                       {/* Excerpt - kleiner */}
-                      <p className="text-slate-300 text-xs leading-relaxed mb-3 line-clamp-3">
+                      <p className="text-slate-600 text-xs leading-relaxed mb-3 line-clamp-3">
                         {article.excerpt}
                       </p>
 
                       {/* Meta Info - kompakter */}
-                      <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-slate-600">
+                      <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-neutral-200">
                         <div className="flex items-center gap-2">
                           <div className="flex items-center gap-1">
                             <User className="w-3 h-3" />
@@ -341,7 +336,7 @@ const AktuellesPage = () => {
                         {article.tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="px-2 py-1 bg-slate-800 text-slate-300 text-xs rounded-md"
+                            className="px-2 py-1 bg-neutral-100 text-slate-700 text-xs rounded-md"
                           >
                             #{tag}
                           </span>

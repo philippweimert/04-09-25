@@ -91,25 +91,21 @@ const DieBavPageY = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      {/* Doubled spacing from header */}
-      <main className="pt-56">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Content */}
+      <main className="section">
+        <div className="container">
           <div className="max-w-6xl mx-auto">
             {/* Hero Section */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
+              <div className="inline-flex items-center px-6 py-3 bg-neutral-100 rounded-full text-slate-700 text-sm font-medium mb-8">
                 <User className="w-5 h-5 mr-2" />
                 Für Arbeitnehmer
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                <span className="text-acencia-orange">Sicherheit</span> für
-                später –<br />
-                heute schon profitieren
-              </h1>
-              <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
+              <h1 className="mb-8">Sicherheit für später – heute schon profitieren</h1>
+              <p className="text-base text-muted-foreground leading-relaxed max-w-4xl mx-auto measure">
                 Was bleibt am Ende des Berufslebens?
               </p>
             </div>

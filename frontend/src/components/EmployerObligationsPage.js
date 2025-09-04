@@ -113,12 +113,12 @@ const EmployerObligationsPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-acencia">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      <div className="pt-32 bg-acencia">
-        {/* Modern Hero Section */}
-        <section className="bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light py-16 relative overflow-hidden">
+      <div className="section">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
           {/* Geometric background patterns */}
           <div className="absolute inset-0 opacity-[0.08]">
             <svg
@@ -146,22 +146,11 @@ const EmployerObligationsPage = () => {
               />
             </svg>
           </div>
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 bg-acencia-orange rounded-full text-white text-sm font-medium mb-6">
-                <Scale className="w-4 h-4 mr-2" />
-                Rechtliche Grundlagen
-              </div>
+              <h1 className="mb-6">bAV – rechtliche Grundlagen</h1>
 
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight font-heading">
-                <span className="text-white">bAV - </span>
-                <span className="text-acencia-orange">
-                  rechtliche Grundlagen
-                </span>
-              </h1>
-
-              <p className="text-lg text-slate-200 max-w-4xl mx-auto leading-relaxed font-body mb-8">
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto leading-relaxed font-body mb-8 measure">
                 Verstehen Sie Ihre Pflichten und Chancen als Arbeitgeber bei der
                 betrieblichen Altersvorsorge. Wir unterstützen Sie bei der
                 rechtssicheren Umsetzung.
@@ -170,7 +159,7 @@ const EmployerObligationsPage = () => {
               {/* Quick action buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
-                  className="bg-acencia-orange hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  className="btn--primary"
                   onClick={() =>
                     window.open(
                       'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
@@ -183,7 +172,7 @@ const EmployerObligationsPage = () => {
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-2 border-slate-300 text-slate-200 hover:border-acencia-orange hover:text-acencia-orange px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+                  className="btn--secondary"
                   onClick={() =>
                     window.open(
                       'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
@@ -196,33 +185,11 @@ const EmployerObligationsPage = () => {
                 </Button>
               </div>
             </div>
-
-            {/* Important notice - compact and integrated */}
-            <div className="max-w-3xl mx-auto">
-              <div className="bg-slate-800/60 backdrop-blur-sm rounded-2xl p-6 border border-slate-600/50">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <AlertTriangle className="w-6 h-6 text-red-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-2 font-heading">
-                      Wichtiger Hinweis zur gesetzlichen Verpflichtung
-                    </h3>
-                    <p className="text-slate-300 text-sm leading-relaxed font-body">
-                      Seit 2019 sind Arbeitgeber verpflichtet, ihre
-                      Mitarbeitenden jährlich über die Möglichkeiten der
-                      betrieblichen Altersvorsorge zu informieren. Eine
-                      rechtssichere Umsetzung schützt vor Haftungsrisiken.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
         {/* Main Content Section */}
-        <section className="bg-gradient-to-b from-acencia-light via-white to-acencia-blue-light py-16 relative overflow-hidden">
+        <section className="section relative overflow-hidden bg-bg-subtle">
           {/* Background patterns for light section */}
           <div className="absolute inset-0 opacity-[0.04]">
             <svg
@@ -249,17 +216,12 @@ const EmployerObligationsPage = () => {
               />
             </svg>
           </div>
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             {/* Legal Obligations Section */}
             <div className="mb-16">
               <div className="text-center mb-12">
-                <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
-                  <span className="text-slate-900">Ihre </span>
-                  <span className="text-acencia">Pflichten</span>
-                  <span className="text-slate-900"> als Arbeitgeber</span>
-                </h2>
-                <p className="text-slate-600 max-w-3xl mx-auto font-body">
+                <h2 className="mb-4">Ihre Pflichten als Arbeitgeber</h2>
+                <p className="text-muted-foreground max-w-3xl mx-auto font-body">
                   Diese rechtlichen Verpflichtungen müssen Sie bei der bAV
                   beachten
                 </p>
@@ -269,24 +231,24 @@ const EmployerObligationsPage = () => {
                 {obligations.map((obligation, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-100"
+                    className="bg-white rounded-lg overflow-hidden border border-neutral-200"
                   >
                     <div className="p-6">
                       <div className="flex items-start space-x-4 mb-4">
-                        <div className="flex-shrink-0 p-3 bg-gradient-to-br from-acencia to-acencia-blue rounded-xl text-white">
+                        <div className="flex-shrink-0 p-3 bg-neutral-100 rounded-xl text-slate-700">
                           {obligation.icon}
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-slate-900 mb-2 font-heading">
+                          <h3 className="text-lg font-semibold mb-2 font-heading">
                             {obligation.title}
                           </h3>
-                          <p className="text-slate-600 text-sm font-body">
+                          <p className="text-muted-foreground text-sm font-body">
                             {obligation.summary}
                           </p>
                         </div>
                         <button
                           onClick={() => toggleSection(`obligation-${index}`)}
-                          className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors"
+                          className="flex-shrink-0 w-8 h-8 rounded-full bg-neutral-100 flex items-center justify-center hover:bg-neutral-200 transition-colors"
                         >
                           <ChevronDown
                             className={`w-4 h-4 text-slate-600 transition-transform duration-300 ${
@@ -306,15 +268,15 @@ const EmployerObligationsPage = () => {
                             : 'max-h-0 opacity-0'
                         }`}
                       >
-                        <div className="pt-4 border-t border-slate-100">
+                        <div className="pt-4 border-t border-neutral-200">
                           <ul className="space-y-2 mb-4">
                             {obligation.details.map((detail, detailIndex) => (
                               <li
                                 key={detailIndex}
                                 className="flex items-start space-x-3"
                               >
-                                <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                                <span className="text-slate-600 text-sm font-body">
+                                <CheckCircle className="w-4 h-4 text-slate-600 mt-0.5 flex-shrink-0" />
+                                <span className="text-muted-foreground text-sm font-body">
                                   {detail}
                                 </span>
                               </li>
@@ -337,12 +299,8 @@ const EmployerObligationsPage = () => {
             {/* Opportunities Section */}
             <div className="mb-12">
               <div className="text-center mb-12">
-                <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 font-heading">
-                  <span className="text-slate-900">Ihre </span>
-                  <span className="text-acencia-orange">Chancen</span>
-                  <span className="text-slate-900"> mit bAV</span>
-                </h2>
-                <p className="text-slate-600 max-w-3xl mx-auto font-body">
+                <h2 className="mb-4">Ihre Chancen mit bAV</h2>
+                <p className="text-muted-foreground max-w-3xl mx-auto font-body">
                   Diese Vorteile bietet die betriebliche Altersvorsorge für Ihr
                   Unternehmen
                 </p>
@@ -352,20 +310,20 @@ const EmployerObligationsPage = () => {
                 {opportunities.map((opportunity, index) => (
                   <div
                     key={index}
-                    className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-acencia-orange/30"
+                    className="bg-white rounded-lg p-6 border border-neutral-200"
                   >
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-gradient-to-br from-acencia-orange to-orange-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
-                        <div className="text-white">{opportunity.icon}</div>
+                        <div className="w-16 h-16 bg-neutral-100 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                        <div className="text-slate-700">{opportunity.icon}</div>
                       </div>
-                      <h3 className="text-lg font-semibold text-slate-900 mb-3 font-heading">
+                      <h3 className="text-lg font-semibold mb-3 font-heading">
                         {opportunity.title}
                       </h3>
-                      <p className="text-slate-600 text-sm mb-4 font-body">
+                      <p className="text-muted-foreground text-sm mb-4 font-body">
                         {opportunity.summary}
                       </p>
-                      <div className="bg-gradient-to-r from-acencia-orange/10 to-orange-100 rounded-xl p-3">
-                        <p className="text-acencia text-xs font-semibold font-body">
+                      <div className="bg-neutral-100 rounded-xl p-3">
+                        <p className="text-slate-700 text-xs font-semibold font-body">
                           {opportunity.benefit}
                         </p>
                       </div>
@@ -376,17 +334,17 @@ const EmployerObligationsPage = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center bg-gradient-to-r from-acencia via-acencia-light to-acencia rounded-3xl p-8 text-white">
+            <div className="text-center rounded-lg p-8 border border-neutral-200 bg-white">
               <div className="max-w-3xl mx-auto">
-                <h3 className="text-xl lg:text-2xl font-bold mb-4 font-heading">
+                <h3 className="text-xl lg:text-2xl font-semibold mb-4 font-heading">
                   Lassen Sie sich rechtssicher beraten
                 </h3>
-                <p className="text-slate-200 mb-6 font-body">
+                <p className="text-muted-foreground mb-6 font-body">
                   Unsere Experten unterstützen Sie bei der compliant Umsetzung
                   Ihrer bAV-Strategie
                 </p>
                 <Button
-                  className="bg-acencia-orange hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300"
+                  className="btn--primary"
                   onClick={() =>
                     window.open(
                       'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
