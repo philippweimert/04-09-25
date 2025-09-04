@@ -109,7 +109,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light min-h-[80vh] flex items-center overflow-hidden">
+    <section className="relative bg-gradient-to-b from-acencia to-acencia-light min-h-[80vh] flex items-center overflow-hidden">
       {/* Enhanced geometric background patterns - wie zuvor mit Bewegung */}
       <div className="absolute inset-0">
         {/* Animated geometric SVG patterns */}
@@ -140,7 +140,7 @@ const HeroSection = () => {
           {/* Left content */}
           <div className="text-left animate-fade-in">
             <div className="mb-8">
-              <span className="bg-gradient-to-r from-orange-500 to-orange-400 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg hover:shadow-xl transition-shadow duration-300 inline-flex items-center space-x-2">
+              <span className="bg-white/10 border border-white/20 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-200 inline-flex items-center space-x-2">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                 <span>Digitale bAV-Lösung</span>
               </span>
@@ -148,7 +148,7 @@ const HeroSection = () => {
             
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-8 leading-tight font-heading">
               Wir machen<br />
-              <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">
+              <span className="text-acencia-blue">
                 bAV einfach!
               </span>
             </h1>
@@ -166,7 +166,7 @@ const HeroSection = () => {
                   className="flex items-center space-x-3 group hover:translate-x-2 transition-all duration-300"
                   style={{animationDelay: `${index * 200}ms`}}
                 >
-                  <div className="text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform">
+                  <div className="text-acencia-blue transition-colors duration-300">
                     {benefit.icon}
                   </div>
                   <span className="text-slate-200 font-medium group-hover:text-white transition-colors duration-300">
@@ -179,7 +179,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg group"
+                className="bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-10 py-4 text-lg font-semibold rounded-xl transition-colors duration-200"
                 onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
               >
                 <span>Jetzt starten</span>
@@ -193,7 +193,7 @@ const HeroSection = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-lg relative group">
               {/* Video Container */}
-              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 shadow-2xl backdrop-blur-sm relative">
+              <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-white/40 transition-all duration-300 shadow-xl backdrop-blur-sm relative">
                 
                 <iframe 
                   id="youtube-player"
@@ -214,7 +214,7 @@ const HeroSection = () => {
                     <div className="text-center p-8 max-w-md">
                       {/* Overlay Header */}
                       <div className="mb-6">
-                        <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <div className="w-16 h-16 bg-[hsl(var(--primary))] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                           <CheckCircle className="w-8 h-8 text-white" />
                         </div>
                         <h3 className="text-2xl font-bold text-white mb-2">Video beendet</h3>
@@ -225,7 +225,7 @@ const HeroSection = () => {
                       <div className="space-y-3">
                         <button
                           onClick={handleReplay}
-                          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center space-x-2"
+                          className="w-full bg-[hsl(var(--primary))] hover:bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-6 py-3 rounded-xl font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
                         >
                           <Play className="w-5 h-5" />
                           <span>Erneut ansehen</span>
@@ -244,11 +244,11 @@ const HeroSection = () => {
                 )}
 
                 {/* Video Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/0 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 
                 {/* Corner decorations */}
-                <div className="absolute top-4 right-4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
-                <div className="absolute bottom-4 left-4 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-white/60 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-4 left-4 w-1 h-1 bg-white/40 rounded-full animate-ping"></div>
               </div>
 
               {/* Video Info */}
@@ -269,7 +269,7 @@ const HeroSection = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-          <div className="flex flex-col items-center text-slate-400 hover:text-orange-400 transition-colors duration-300 cursor-pointer">
+          <div className="flex flex-col items-center text-slate-400 hover:text-acencia-blue transition-colors duration-300 cursor-pointer">
             <span className="text-sm font-medium mb-2">Mehr erfahren</span>
             <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-bounce"></div>

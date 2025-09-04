@@ -19,12 +19,12 @@ const KontaktBeratungPage = () => {
             
             {/* Hero Section */}
             <div className="text-center mb-16">
-              <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
+              <div className="inline-flex items-center px-6 py-3 bg-white/10 border border-white/20 rounded-full text-white text-sm font-medium mb-8">
                 <MessageSquare className="w-5 h-5 mr-2" />
                 Individuelle Beratung
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                Persönliche <span className="text-acencia-orange">Beratung</span>
+                Persönliche <span className="text-acencia-blue">Beratung</span>
               </h1>
               <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
                 Lassen Sie sich von unseren Experten individuell beraten - zu bAV, bKV und bUV
@@ -34,18 +34,18 @@ const KontaktBeratungPage = () => {
             {/* Beratung Options */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-                <Phone className="w-12 h-12 text-acencia-orange mx-auto mb-4" />
+                <Phone className="w-12 h-12 text-acencia-blue mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Telefonberatung</h3>
                 <p className="text-slate-200 text-sm mb-4">
                   Schnelle und unkomplizierte Beratung am Telefon
                 </p>
-                <button className="bg-acencia-orange text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-colors">
+                <button className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-6 py-2 rounded-lg transition-colors">
                   Anrufen
                 </button>
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 text-center">
-                <Calendar className="w-12 h-12 text-acencia-orange mx-auto mb-4" />
+                <Calendar className="w-12 h-12 text-acencia-blue mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Termin vereinbaren</h3>
                 <p className="text-slate-200 text-sm mb-4">
                   Persönlicher Beratungstermin vor Ort oder online

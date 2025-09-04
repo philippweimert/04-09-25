@@ -401,13 +401,13 @@ html {
 
 /* Text selection */
 ::selection {
-  background-color: rgba(249, 115, 22, 0.2);
-  color: #1e293b;
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
 }
 
 ::-moz-selection {
-  background-color: rgba(249, 115, 22, 0.2);
-  color: #1e293b;
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--primary-foreground));
 }
 
 
