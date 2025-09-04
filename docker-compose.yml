@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=*
+      - CONTACT_FROM=noreply@example.com
+      - CONTACT_TO=admin@example.com
+    volumes:
+      - ./backend/.env:/app/backend/.env:ro
+    restart: unless-stopped

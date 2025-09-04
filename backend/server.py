@@ -109,10 +109,12 @@ Gesendet am: {datetime.now().strftime('%d.%m.%Y um %H:%M:%S')}
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
 async def root():
+    """Health check endpoint returning a static message."""
     return {"message": "Hello World"}
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
+    """Create a status check entry and persist to the portable store."""
     status_dict = input.dict()
     status_obj = StatusCheck(**status_dict)
     await db.insert_one('status_checks', status_obj.dict())
@@ -120,12 +122,13 @@ async def create_status_check(input: StatusCheckCreate):
 
 @api_router.get("/status", response_model=List[StatusCheck])
 async def get_status_checks():
+    """Retrieve recent status checks from the portable store."""
     status_checks = await db.find_all('status_checks', 1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
 @api_router.post("/contact")
 async def submit_contact_form(contact_data: ContactForm):
-    """Handle contact form submission"""
+    """Handle contact form submission."""
     try:
         result = await send_email(contact_data)
         return result
