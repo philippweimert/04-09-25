@@ -42,12 +42,12 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-acencia">
+    <div className="min-h-screen bg-bg">
       <Header />
 
-      <div className="pt-32 bg-acencia">
+      <div className="section">
         {/* Kompakte Hero Section */}
-        <section className="bg-gradient-to-b from-acencia via-acencia to-acencia py-16 relative overflow-hidden">
+        <section className="relative overflow-hidden">
           {/* Geometrische Hintergrundmuster in Weiß */}
           <div className="absolute inset-0 opacity-[0.08]">
             <svg
@@ -76,15 +76,15 @@ const AboutPage = () => {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="text-center mb-8">
-              <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              <h1 className="mb-4">
                 Über{' '}
                 <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent">
                   ACENCIA
                 </span>
               </h1>
-              <p className="text-lg text-slate-200 max-w-4xl mx-auto">
+              <p className="text-base text-muted-foreground max-w-4xl mx-auto measure">
                 Ihr digitaler Partner für einfache und rechtssichere
                 betriebliche Altersvorsorge
               </p>
@@ -92,8 +92,8 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Kompakter Hauptinhalt - erst hier Farbwechsel */}
-        <section className="bg-gradient-to-b from-acencia via-acencia-light to-acencia-blue py-16 relative overflow-hidden">
+        {/* Kompakter Hauptinhalt */}
+        <section className="section relative overflow-hidden bg-bg-subtle">
           {/* Subtle background elements */}
           <div className="absolute inset-0 opacity-[0.03]">
             <svg
@@ -120,21 +120,21 @@ const AboutPage = () => {
             </svg>
           </div>
 
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Company Info - Kompakt */}
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">
+                <h2 className="mb-6">
                   Digitale bAV-Expertise seit über 30 Jahren
                 </h2>
-                <div className="space-y-4 text-slate-300">
-                  <p className="leading-relaxed">
+                <div className="space-y-4 text-muted-foreground">
+                  <p className="leading-relaxed measure">
                     ACENCIA ist Ihr spezialisierter Partner für die vollständige
                     Digitalisierung der betrieblichen Altersvorsorge. Wir
                     vereinfachen komplexe Verwaltungsprozesse und sorgen für
                     rechtssichere Abwicklung.
                   </p>
-                  <p className="leading-relaxed">
+                  <p className="leading-relaxed measure">
                     Mit unserer modernen Plattform automatisieren wir Ihre
                     bAV-Verwaltung vollständig - von der Einrichtung bis zur
                     laufenden Betreuung.
@@ -142,23 +142,23 @@ const AboutPage = () => {
                 </div>
 
                 {/* Kompakte Kontakt-Info */}
-                <div className="mt-8 bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">
+                <div className="mt-8 rounded-lg p-6 border border-neutral-200 bg-white">
+                  <h3 className="mb-4">
                     Kontakt
                   </h3>
                   <div className="space-y-3 text-sm">
-                    <div className="flex items-center space-x-3 text-slate-300">
-                      <MapPin className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                    <div className="flex items-center space-x-3 text-muted-foreground">
+                      <MapPin className="w-4 h-4 text-slate-500 flex-shrink-0" />
                       <span>
                         ACENCIA GmbH, Musterstraße 123, 12345 Musterstadt
                       </span>
                     </div>
-                    <div className="flex items-center space-x-3 text-slate-300">
-                      <Phone className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                    <div className="flex items-center space-x-3 text-muted-foreground">
+                      <Phone className="w-4 h-4 text-slate-500 flex-shrink-0" />
                       <span>+49 (0) 123 456 789</span>
                     </div>
-                    <div className="flex items-center space-x-3 text-slate-300">
-                      <Mail className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                    <div className="flex items-center space-x-3 text-muted-foreground">
+                      <Mail className="w-4 h-4 text-slate-500 flex-shrink-0" />
                       <span>info@acencia.de</span>
                     </div>
                   </div>
@@ -167,24 +167,24 @@ const AboutPage = () => {
 
               {/* Kompakte Values */}
               <div>
-                <h3 className="text-xl font-bold text-white mb-6">
+                <h3 className="mb-6">
                   Unsere Werte
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {values.map((value, index) => (
                     <div
                       key={index}
-                      className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-xl p-4 hover:from-orange-600 hover:to-orange-700 transition-all duration-400 group"
+                      className="rounded-lg p-4 border border-neutral-200 bg-white group"
                     >
                       <div className="flex items-center space-x-3 mb-3">
-                        <div className="text-orange-400 group-hover:text-white transition-colors">
+                        <div className="text-slate-600">
                           {value.icon}
                         </div>
-                        <h4 className="font-semibold text-white text-base">
+                        <h4 className="text-base">
                           {value.title}
                         </h4>
                       </div>
-                      <p className="text-slate-300 group-hover:text-slate-100 text-sm leading-relaxed transition-colors">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         {value.description}
                       </p>
                     </div>
@@ -194,7 +194,7 @@ const AboutPage = () => {
                 {/* Kompakte Call-to-Action */}
                 <div className="mt-8 text-center">
                   <Button
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-400 hover:scale-105 shadow-lg"
+                    className="btn--primary"
                     onClick={() =>
                       window.open(
                         'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',

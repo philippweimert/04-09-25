@@ -120,7 +120,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative bg-gradient-to-b from-acencia via-acencia via-acencia to-acencia-light min-h-[80vh] flex items-center overflow-hidden">
+    <section className="relative bg-bg section overflow-hidden">
       {/* Enhanced geometric background patterns - wie zuvor mit Bewegung */}
       <div className="absolute inset-0">
         {/* Animated geometric SVG patterns */}
@@ -168,7 +168,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-left animate-fade-in">
@@ -179,7 +179,7 @@ const HeroSection = () => {
               </span>
             </div>
 
-            <h1 className="text-3xl lg:text-5xl font-bold text-white mb-8 leading-tight font-heading">
+            <h1 className="mb-8">
               Wir machen
               <br />
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">
@@ -187,7 +187,7 @@ const HeroSection = () => {
               </span>
             </h1>
 
-            <p className="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed font-body">
+            <p className="text-base text-muted-foreground mb-8 measure font-body">
               Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten,
               digitalen All-in-One-Plattform für die betriebliche
               Altersvorsorge.
@@ -214,7 +214,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg group"
+                className="btn--primary"
                 onClick={() =>
                   window.open(
                     'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
@@ -223,7 +223,7 @@ const HeroSection = () => {
                 }
               >
                 <span>Jetzt starten</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </div>
           </div>
