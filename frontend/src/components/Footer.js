@@ -48,7 +48,7 @@ const Footer = () => {
                 {/* LinkedIn Button */}
                 <button
                   onClick={() => window.open('https://www.linkedin.com/company/acencia/', '_blank')}
-                  className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#0077b5] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-gradient-to-br hover:from-[#331029] hover:to-[#310413] cursor-pointer"
+                  className="group inline-flex items-center justify-center p-2 rounded-md border border-white/20 bg-white/0 text-white transition-colors duration-200 hover:bg-white/10 cursor-pointer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const Footer = () => {
                     ></path>
                   </svg>
                   <span
-                    className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                    className="sr-only"
                   >
                     LinkedIn
                   </span>
@@ -74,7 +74,7 @@ const Footer = () => {
                 {/* YouTube Button */}
                 <button
                   onClick={() => window.open('https://www.youtube.com/@ACENCIAde', '_blank')}
-                  className="group flex justify-center p-2 rounded-md drop-shadow-xl bg-[#CD201F] text-white font-semibold hover:translate-y-3 hover:rounded-[50%] transition-all duration-500 hover:bg-gradient-to-br hover:from-[#331029] hover:to-[#310413] cursor-pointer"
+                  className="group inline-flex items-center justify-center p-2 rounded-md border border-white/20 bg-white/0 text-white transition-colors duration-200 hover:bg-white/10 cursor-pointer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +91,7 @@ const Footer = () => {
                     ></path>
                   </svg>
                   <span
-                    className="absolute opacity-0 group-hover:opacity-100 group-hover:text-gray-700 group-hover:text-sm group-hover:-translate-y-10 duration-700"
+                    className="sr-only"
                   >
                     YouTube
                   </span>
@@ -114,12 +114,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/ueber-uns" className="text-slate-300 hover:text-orange-400 transition-colors duration-200">
+                <Link to="/ueber-uns" className="text-slate-300 hover:text-acencia-blue transition-colors duration-200">
                   Über uns
                 </Link>
               </li>
               <li>
-                <Link to="/kontakt" className="text-slate-300 hover:text-orange-400 transition-colors duration-200">
+                <Link to="/kontakt" className="text-slate-300 hover:text-acencia-blue transition-colors duration-200">
                   Kontakt
                 </Link>
               </li>
@@ -128,7 +128,7 @@ const Footer = () => {
                   href="https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-orange-400 transition-colors duration-200"
+                  className="text-slate-300 hover:text-acencia-blue transition-colors duration-200"
                 >
                   Termin vereinbaren
                 </a>
@@ -154,10 +154,10 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-6 text-sm">
-            <Link to="/datenschutz" className="text-slate-400 hover:text-orange-400 transition-colors duration-200">
+            <Link to="/datenschutz" className="text-slate-400 hover:text-acencia-blue transition-colors duration-200">
               Datenschutzerklärung
             </Link>
-            <Link to="/impressum" className="text-slate-400 hover:text-orange-400 transition-colors duration-200">
+            <Link to="/impressum" className="text-slate-400 hover:text-acencia-blue transition-colors duration-200">
               Impressum
             </Link>
           </div>

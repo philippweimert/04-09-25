@@ -20,13 +20,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}>
+    <header className={`w-full z-50 transition-all duration-300 bg-acencia/95 backdrop-blur-sm border-b border-acencia-blue-light/20`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
         <div className="flex items-center h-20">
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <svg viewBox="0 0 2000 340" className="h-12 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+              <svg viewBox="0 0 2000 340" className="h-12 w-auto transition-all duration-200" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
                 {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
                   <rect x="63" y="40" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
@@ -36,7 +36,7 @@ const Header = () => {
                 
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="390" y="30" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="390" y="30" className="fill-white group-hover:fill-acencia-blue transition-all duration-200" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '235px',
                     fontWeight: '400',
@@ -47,7 +47,7 @@ const Header = () => {
                 
                 {/* Tagline: WIR MACHEN BAV EINFACH */}
                 <g id="tagline">
-                  <text x="390" y="255" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
+                  <text x="390" y="255" className="fill-white group-hover:fill-acencia-blue transition-all duration-200" style={{
                     fontFamily: 'Tenor Sans, serif',
                     fontSize: '65px',
                     fontWeight: '400',
@@ -73,32 +73,32 @@ const Header = () => {
               >
                 <Link 
                   to="/die-bav" 
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-white transition-colors duration-200 font-medium group py-2 text-body flex items-center"
                 >
                   <span>bAV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/60 group-hover:w-full transition-all duration-200 ease-out"></div>
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl border border-acencia-blue-light/20 py-2 transition-all duration-200 ${
                   isBavDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
                 }`}>
                   <Link 
                     to="/die-bav/x" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     Für Unternehmen
                   </Link>
                   <Link 
                     to="/die-bav/y" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     Für Arbeitnehmer
                   </Link>
                   <Link 
                     to="/die-bav/aktuelles" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     Aktuelles
                   </Link>
@@ -113,26 +113,26 @@ const Header = () => {
               >
                 <Link 
                   to="/bkv" 
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-white transition-colors duration-200 font-medium group py-2 text-body flex items-center"
                 >
                   <span>bKV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/60 group-hover:w-full transition-all duration-200 ease-out"></div>
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl border border-acencia-blue-light/20 py-2 transition-all duration-200 ${
                   isBkvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
                 }`}>
                   <Link 
                     to="/bkv/x" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     bKV Option X
                   </Link>
                   <Link 
                     to="/bkv/y" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     bKV Option Y
                   </Link>
@@ -147,26 +147,26 @@ const Header = () => {
               >
                 <Link 
                   to="/buv" 
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-white transition-colors duration-200 font-medium group py-2 text-body flex items-center"
                 >
                   <span>bUV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/60 group-hover:w-full transition-all duration-200 ease-out"></div>
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl border border-acencia-blue-light/20 py-2 transition-all duration-200 ${
                   isBuvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
                 }`}>
                   <Link 
                     to="/buv/x" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     bUV Option X
                   </Link>
                   <Link 
                     to="/buv/y" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     bUV Option Y
                   </Link>
@@ -181,26 +181,26 @@ const Header = () => {
               >
                 <Link 
                   to="/ueber-uns" 
-                  className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
+                  className="relative text-white transition-colors duration-200 font-medium group py-2 text-body flex items-center"
                 >
                   <span>über uns</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
+                  <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-white/60 group-hover:w-full transition-all duration-200 ease-out"></div>
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                <div className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl border border-acencia-blue-light/20 py-2 transition-all duration-200 ${
                   isAboutDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
                 }`}>
                   <Link 
                     to="/ueber-uns/service-team" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     Service-Team
                   </Link>
                   <Link 
                     to="/kontakt" 
-                    className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                    className="block px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200"
                   >
                     Kontakt
                   </Link>
@@ -214,7 +214,7 @@ const Header = () => {
               <div className="flex flex-col items-center space-y-1">
                 {/* Login Portal */}
                 <Button 
-                  className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-md text-sm"
+                  className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-6 py-2 rounded-lg font-semibold transition-colors duration-200 text-sm"
                   onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
                 >
                   Login Portal
@@ -224,7 +224,7 @@ const Header = () => {
                 <div className="tooltip-wrapper relative">
                   <ul className="tooltip-container">
                     <li style={{"--i": "1.1s"}} className="nav-link group">
-                      <div className="tooltip-tab flex items-center space-x-1 text-white hover:text-orange-400 transition-colors cursor-pointer px-2 py-1">
+                      <div className="tooltip-tab flex items-center space-x-1 text-white hover:text-acencia-blue transition-colors cursor-pointer px-2 py-1">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           style={{fill: "none"}}
@@ -242,10 +242,10 @@ const Header = () => {
                         </svg>
                         <span className="text-xs font-medium">Support</span>
                       </div>
-                      <div className="tooltip absolute top-full right-0 mt-1 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                      <div className="tooltip absolute top-full right-0 mt-1 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl border border-acencia-blue-light/20 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                         <ul className="tooltip-menu-with-icon">
                           <li className="tooltip-link">
-                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200" href="tel:+49-6754-123456">
+                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200" href="tel:+49-6754-123456">
                               <svg
                                 aria-hidden="true"
                                 role="img"
@@ -287,7 +287,7 @@ const Header = () => {
                             </div>
                           </li>
                           <li className="tooltip-link">
-                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200" href="mailto:info@acencia.de">
+                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-acencia-blue hover:bg-white/5 transition-colors duration-200" href="mailto:info@acencia.de">
                               <svg
                                 aria-hidden="true"
                                 role="img"
@@ -319,7 +319,7 @@ const Header = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-orange-400 hover:bg-white/10 p-3 rounded-xl transition-all duration-300"
+              className="text-white hover:text-acencia-blue hover:bg-white/10 p-3 rounded-xl transition-all duration-200"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
@@ -330,12 +330,12 @@ const Header = () => {
         <div className={`md:hidden transition-all duration-300 overflow-hidden ${
           isMenuOpen ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
+          <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-blue-light/20">
             {/* bAV with submenu in mobile */}
             <div className="space-y-1">
               <Link
                 to="/die-bav"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium flex items-center"
+                className="block px-6 py-3 text-white hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200 font-medium flex items-center"
                 onClick={() => setIsMenuOpen(false)}
                 title="betriebliche Altersversorgung"
               >
@@ -344,21 +344,21 @@ const Header = () => {
               <div className="pl-4 space-y-1">
                 <Link
                   to="/die-bav/x"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Für Unternehmen
                 </Link>
                 <Link
                   to="/die-bav/y"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Für Arbeitnehmer
                 </Link>
                 <Link
                   to="/die-bav/aktuelles"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Aktuelles
@@ -370,7 +370,7 @@ const Header = () => {
             <div className="space-y-1">
               <Link
                 to="/bkv"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium flex items-center"
+                className="block px-6 py-3 text-white hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200 font-medium flex items-center"
                 onClick={() => setIsMenuOpen(false)}
                 title="betriebliche Krankenversicherung"
               >
@@ -379,14 +379,14 @@ const Header = () => {
               <div className="pl-4 space-y-1">
                 <Link
                   to="/bkv/x"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   bKV Option X
                 </Link>
                 <Link
                   to="/bkv/y"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   bKV Option Y
@@ -398,7 +398,7 @@ const Header = () => {
             <div className="space-y-1">
               <Link
                 to="/buv"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium flex items-center"
+                className="block px-6 py-3 text-white hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200 font-medium flex items-center"
                 onClick={() => setIsMenuOpen(false)}
                 title="betriebliche Unfallversicherung"
               >
@@ -407,14 +407,14 @@ const Header = () => {
               <div className="pl-4 space-y-1">
                 <Link
                   to="/buv/x"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   bUV Option X
                 </Link>
                 <Link
                   to="/buv/y"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   bUV Option Y
@@ -426,7 +426,7 @@ const Header = () => {
             <div className="space-y-1">
               <Link
                 to="/ueber-uns"
-                className="block px-6 py-3 text-white hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300 font-medium"
+                className="block px-6 py-3 text-white hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 über uns
@@ -434,14 +434,14 @@ const Header = () => {
               <div className="pl-4 space-y-1">
                 <Link
                   to="/ueber-uns/service-team"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Service-Team
                 </Link>
                 <Link
                   to="/kontakt"
-                  className="block px-6 py-2 text-sm text-slate-300 hover:text-orange-400 hover:bg-white/5 rounded-xl transition-all duration-300"
+                  className="block px-6 py-2 text-sm text-slate-300 hover:text-acencia-blue hover:bg-white/5 rounded-xl transition-all duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Kontakt
@@ -451,7 +451,7 @@ const Header = () => {
             
             <div className="pt-2">
               <Button 
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
+                className="w-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold rounded-xl py-3 transition-colors duration-200"
                 onClick={() => {
                   window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank');
                   setIsMenuOpen(false);

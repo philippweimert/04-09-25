@@ -39,13 +39,13 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section className="bg-slate-900 py-20">
+    <section className="bg-acencia py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full mb-6">
-            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-            <span className="text-orange-400 font-medium text-sm">Unser bewährter 3-Stufen-Prozess</span>
+          <div className="inline-flex items-center space-x-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full mb-6">
+            <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+            <span className="text-acencia-blue font-medium text-sm">Unser bewährter 3-Stufen-Prozess</span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses
@@ -54,7 +54,7 @@ const ProcessSection = () => {
             Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
             wir machen bAV einfach und effizient.
           </p>
-          <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-[hsl(var(--primary))] mx-auto mt-6"></div>
         </div>
 
         {/* Process steps */}
@@ -66,10 +66,10 @@ const ProcessSection = () => {
                 {/* Step number and icon */}
                 <div className="lg:col-span-2 flex flex-col items-center lg:items-start">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 bg-[hsl(var(--primary))] rounded-full flex items-center justify-center text-white font-bold text-lg">
                       {index + 1}
                     </div>
-                    <div className="text-orange-500">
+                    <div className="text-acencia-blue">
                       {step.icon}
                     </div>
                   </div>
@@ -77,14 +77,14 @@ const ProcessSection = () => {
 
                 {/* Content */}
                 <div className="lg:col-span-7">
-                  <div className="bg-slate-800 rounded-2xl p-8 h-full hover:bg-slate-700 transition-colors duration-300 border border-slate-700 hover:border-orange-500/50">
+                  <div className="bg-[hsl(var(--card))] text-[hsl(var(--card-foreground))] rounded-2xl p-8 h-full transition-colors duration-200 border border-acencia-blue-light/20">
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-orange-400 font-medium mb-4 text-lg">
+                    <p className="text-acencia-blue font-medium mb-4 text-lg">
                       {step.subtitle}
                     </p>
-                    <p className="text-slate-300 leading-relaxed mb-6">
+                    <p className="text-white/80 leading-relaxed mb-6">
                       {step.description}
                     </p>
                     
@@ -95,8 +95,8 @@ const ProcessSection = () => {
                       </h4>
                       {step.keyPoints.map((point, pointIndex) => (
                         <div key={pointIndex} className="flex items-center space-x-2">
-                          <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
-                          <span className="text-slate-300 text-sm">{point}</span>
+                          <CheckCircle className="w-4 h-4 text-acencia-blue flex-shrink-0" />
+                          <span className="text-white/80 text-sm">{point}</span>
                         </div>
                       ))}
                     </div>
@@ -108,7 +108,7 @@ const ProcessSection = () => {
                   {index < processSteps.length - 1 ? (
                     <div className="hidden lg:flex items-center justify-center">
                       <div className="flex flex-col items-center space-y-2">
-                        <ArrowRight className="w-8 h-8 text-orange-500" />
+                        <ArrowRight className="w-8 h-8 text-acencia-blue" />
                         <span className="text-xs text-slate-500 text-center">
                           Nächster<br/>Schritt
                         </span>
@@ -117,7 +117,7 @@ const ProcessSection = () => {
                   ) : (
                     <div className="flex flex-col space-y-4">
                       <button 
-                        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+                        className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
                         onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                       >
                         Jetzt starten
@@ -136,7 +136,7 @@ const ProcessSection = () => {
               {/* Mobile arrow */}
               {index < processSteps.length - 1 && (
                 <div className="flex lg:hidden justify-center my-6">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                  <div className="w-8 h-8 bg-[hsl(var(--primary))] rounded-full flex items-center justify-center">
                     <ArrowRight className="w-4 h-4 text-white rotate-90" />
                   </div>
                 </div>
