@@ -9,8 +9,9 @@ from typing import List, Optional
 
 # Third-party imports
 from fastapi import FastAPI, APIRouter, HTTPException
+from fastapi.staticfiles import StaticFiles
+from starlette.responses import FileResponse
 from dotenv import load_dotenv
-from starlette.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, EmailStr
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -102,10 +103,37 @@ async def submit_contact_form(contact_data: ContactForm):
 
 app.include_router(api_router)
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', 'http://localhost:3000').split(','),
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# --- Serve Frontend ---
+STATIC_DIR = ROOT_DIR / "static"
+
+# Mount the static directory to serve frontend files
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=STATIC_DIR / "static"), name="static_assets")
+
+    @app.get("/{full_path:path}", summary="Serve Frontend Application")
+    async def serve_frontend(full_path: str):
+        """
+        Serves the frontend application.
+        This endpoint catches all paths and serves the index.html,
+        allowing the frontend router to handle the routing.
+        """
+        # Define the path to the index.html file
+        index_html_path = STATIC_DIR / "index.html"
+
+        # Check if the requested path seems to be a file (e.g., has an extension)
+        # This is a simple check; more robust checks might be needed for specific cases
+        if '.' in full_path.split('/')[-1]:
+             # If it looks like a file but wasn't found by StaticFiles, it's a 404
+            raise HTTPException(status_code=404, detail="File not found")
+
+        # If the index.html file exists, return it
+        if index_html_path.exists():
+            return FileResponse(index_html_path)
+
+        # If index.html does not exist, raise a 503 Service Unavailable error
+        raise HTTPException(status_code=503, detail="Frontend not available")
+else:
+    logger.warning(
+        "Static directory not found. Frontend will not be served. "
+        "Run the frontend build and place the output in the 'static' directory."
+    )
