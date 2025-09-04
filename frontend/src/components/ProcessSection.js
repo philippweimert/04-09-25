@@ -1,41 +1,44 @@
-import React from "react";
-import { CheckCircle, Settings, Users, ArrowRight } from "lucide-react";
+import React from 'react';
+import { CheckCircle, Settings, Users, ArrowRight } from 'lucide-react';
 
 const ProcessSection = () => {
   const processSteps = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: "Rechtliche Prüfung",
-      subtitle: "& Einrichtung bAV",
-      description: "Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.",
+      title: 'Rechtliche Prüfung',
+      subtitle: '& Einrichtung bAV',
+      description:
+        'Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.',
       keyPoints: [
-        "Vollständige Compliance-Prüfung",
-        "Individuelle Bedarfsanalyse", 
-        "Rechtssichere Dokumentation"
-      ]
+        'Vollständige Compliance-Prüfung',
+        'Individuelle Bedarfsanalyse',
+        'Rechtssichere Dokumentation',
+      ],
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "Digitale bAV-Verwaltung",
-      subtitle: "& laufender Support",
-      description: "Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.",
+      title: 'Digitale bAV-Verwaltung',
+      subtitle: '& laufender Support',
+      description:
+        'Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.',
       keyPoints: [
-        "System-Integration (HR)",
-        "Vollautomatisierte Prozesse",
-        "24/7 digitaler Support"
-      ]
+        'System-Integration (HR)',
+        'Vollautomatisierte Prozesse',
+        '24/7 digitaler Support',
+      ],
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Mitarbeiterkommunikation",
-      subtitle: "& (digitale) Beratung", 
-      description: "Automatisierte Kommunikation mit Mitarbeitenden und Versorgungsträgern. Moderne Informationsmaßnahmen und auf Wunsch individuelle Beratung - digital oder vor Ort.",
+      title: 'Mitarbeiterkommunikation',
+      subtitle: '& (digitale) Beratung',
+      description:
+        'Automatisierte Kommunikation mit Mitarbeitenden und Versorgungsträgern. Moderne Informationsmaßnahmen und auf Wunsch individuelle Beratung - digital oder vor Ort.',
       keyPoints: [
-        "Automatisierte Kommunikation",
-        "Digitale Mitarbeiter-Portale",
-        "Persönliche Beratung verfügbar"
-      ]
-    }
+        'Automatisierte Kommunikation',
+        'Digitale Mitarbeiter-Portale',
+        'Persönliche Beratung verfügbar',
+      ],
+    },
   ];
 
   return (
@@ -45,14 +48,16 @@ const ProcessSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 px-4 py-2 rounded-full mb-6">
             <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
-            <span className="text-orange-400 font-medium text-sm">Unser bewährter 3-Stufen-Prozess</span>
+            <span className="text-orange-400 font-medium text-sm">
+              Unser bewährter 3-Stufen-Prozess
+            </span>
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses
           </h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
-            Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
-            wir machen bAV einfach und effizient.
+            Von der rechtlichen Einrichtung bis zur vollständigen
+            Digitalisierung - wir machen bAV einfach und effizient.
           </p>
           <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
         </div>
@@ -69,9 +74,7 @@ const ProcessSection = () => {
                     <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
                       {index + 1}
                     </div>
-                    <div className="text-orange-500">
-                      {step.icon}
-                    </div>
+                    <div className="text-orange-500">{step.icon}</div>
                   </div>
                 </div>
 
@@ -87,16 +90,21 @@ const ProcessSection = () => {
                     <p className="text-slate-300 leading-relaxed mb-6">
                       {step.description}
                     </p>
-                    
+
                     {/* Key points */}
                     <div className="space-y-2">
                       <h4 className="text-sm font-semibold text-slate-400 uppercase tracking-wider">
                         Zentrale Vorteile:
                       </h4>
                       {step.keyPoints.map((point, pointIndex) => (
-                        <div key={pointIndex} className="flex items-center space-x-2">
+                        <div
+                          key={pointIndex}
+                          className="flex items-center space-x-2"
+                        >
                           <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0" />
-                          <span className="text-slate-300 text-sm">{point}</span>
+                          <span className="text-slate-300 text-sm">
+                            {point}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -110,21 +118,33 @@ const ProcessSection = () => {
                       <div className="flex flex-col items-center space-y-2">
                         <ArrowRight className="w-8 h-8 text-orange-500" />
                         <span className="text-xs text-slate-500 text-center">
-                          Nächster<br/>Schritt
+                          Nächster
+                          <br />
+                          Schritt
                         </span>
                       </div>
                     </div>
                   ) : (
                     <div className="flex flex-col space-y-4">
-                      <button 
+                      <button
                         className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
-                        onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                        onClick={() =>
+                          window.open(
+                            'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
+                            '_blank',
+                          )
+                        }
                       >
                         Jetzt starten
                       </button>
-                      <button 
+                      <button
                         className="border-2 border-slate-600 text-slate-300 hover:bg-slate-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm"
-                        onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                        onClick={() =>
+                          window.open(
+                            'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
+                            '_blank',
+                          )
+                        }
                       >
                         Beratung buchen
                       </button>

@@ -1,30 +1,45 @@
-import React from "react";
-import { CheckCircle, Settings, Users, ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
+import React from 'react';
+import { CheckCircle, Settings, Users, ArrowRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 const ProcessSectionHomepage = () => {
   const processSteps = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
-      title: "Rechtliche Prüfung",
-      subtitle: "& Einrichtung bAV",
-      description: "Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.",
-      keyPoints: ["Vollständige Compliance-Prüfung", "Individuelle Bedarfsanalyse", "Rechtssichere Dokumentation"]
+      title: 'Rechtliche Prüfung',
+      subtitle: '& Einrichtung bAV',
+      description:
+        'Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.',
+      keyPoints: [
+        'Vollständige Compliance-Prüfung',
+        'Individuelle Bedarfsanalyse',
+        'Rechtssichere Dokumentation',
+      ],
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "Digitale bAV-Verwaltung",
-      subtitle: "& laufender Support",
-      description: "Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.",
-      keyPoints: ["System-Integration (HR)", "Vollautomatisierte Prozesse", "24/7 digitaler Support"]
+      title: 'Digitale bAV-Verwaltung',
+      subtitle: '& laufender Support',
+      description:
+        'Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse. Nahtlose Integration in bestehende HR-Systeme und vollautomatisierte Abwicklung aller Prozesse.',
+      keyPoints: [
+        'System-Integration (HR)',
+        'Vollautomatisierte Prozesse',
+        '24/7 digitaler Support',
+      ],
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Mitarbeiterkommunikation",
-      subtitle: "& (digitale) Beratung",
-      description: "Automatisierte Kommunikation mit Mitarbeitenden und Versorgungsträgern. Moderne Informationsmaßnahmen und auf Wunsch individuelle Beratung - digital oder vor Ort.",
-      keyPoints: ["Automatisierte Kommunikation", "Digitale Mitarbeiter-Portale", "Persönliche Beratung verfügbar"]
-    }
+      title: 'Mitarbeiterkommunikation',
+      subtitle: '& (digitale) Beratung',
+      description:
+        'Automatisierte Kommunikation mit Mitarbeitenden und Versorgungsträgern. Moderne Informationsmaßnahmen und auf Wunsch individuelle Beratung - digital oder vor Ort.',
+      keyPoints: [
+        'Automatisierte Kommunikation',
+        'Digitale Mitarbeiter-Portale',
+        'Persönliche Beratung verfügbar',
+      ],
+    },
   ];
 
   return (
@@ -39,22 +54,25 @@ const ProcessSectionHomepage = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl lg:text-5xl font-bold text-slate-900 mb-6 text-display">
-            Als Partner begleiten wir Sie entlang des gesamten 
+            Als Partner begleiten wir Sie entlang des gesamten
             <span className="text-emphasis"> bAV-Prozesses</span>
           </h2>
           <p className="text-body-large text-slate-600 max-w-3xl mx-auto">
-            Von der rechtlichen Einrichtung bis zur vollständigen Digitalisierung - 
-            wir machen bAV einfach und effizient.
+            Von der rechtlichen Einrichtung bis zur vollständigen
+            Digitalisierung - wir machen bAV einfach und effizient.
           </p>
         </div>
 
         {/* 3-Step Process */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-16">
           {processSteps.map((step, index) => (
-            <div key={index} className="relative stagger-item" style={{ animationDelay: `${index * 0.2}s` }}>
+            <div
+              key={index}
+              className="relative stagger-item"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               {/* Step Card */}
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-400 border border-slate-200 hover:border-orange-300 card-hover h-full">
-                
                 {/* Step Number */}
                 <div className="absolute -top-4 left-8">
                   <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -64,9 +82,7 @@ const ProcessSectionHomepage = () => {
 
                 {/* Icon */}
                 <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl p-4 mb-6 inline-block icon-hover">
-                  <div className="text-orange-600">
-                    {step.icon}
-                  </div>
+                  <div className="text-orange-600">{step.icon}</div>
                 </div>
 
                 {/* Content */}
@@ -86,9 +102,14 @@ const ProcessSectionHomepage = () => {
                     Zentrale Vorteile:
                   </h4>
                   {step.keyPoints.map((point, pointIndex) => (
-                    <div key={pointIndex} className="flex items-start space-x-2">
+                    <div
+                      key={pointIndex}
+                      className="flex items-start space-x-2"
+                    >
                       <CheckCircle className="w-4 h-4 text-orange-500 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700 text-body-small">{point}</span>
+                      <span className="text-slate-700 text-body-small">
+                        {point}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -109,18 +130,28 @@ const ProcessSectionHomepage = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Button 
+            <Button
               size="lg"
               className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 hover:scale-105 shadow-lg text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+              onClick={() =>
+                window.open(
+                  'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
+                  '_blank',
+                )
+              }
             >
               Jetzt starten
             </Button>
-            <Button 
+            <Button
               size="lg"
               variant="outline"
               className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 hover:border-slate-400 px-8 py-3 text-lg font-semibold rounded-xl transition-all duration-400 micro-bounce text-body"
-              onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+              onClick={() =>
+                window.open(
+                  'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
+                  '_blank',
+                )
+              }
             >
               Beratung buchen
             </Button>

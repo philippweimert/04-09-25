@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { CheckCircle, Clock, Shield, ArrowRight, Play } from "lucide-react";
-import { useLocation, Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { Button } from './ui/button';
+import { CheckCircle, Clock, Shield, ArrowRight, Play } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const location = useLocation();
@@ -53,8 +53,8 @@ const HeroSection = () => {
                 if (event.data === window.YT.PlayerState.PLAYING) {
                   setShowVideoOverlay(false);
                 }
-              }
-            }
+              },
+            },
           });
         } catch (error) {
           console.error('YouTube Player initialization failed:', error);
@@ -87,7 +87,9 @@ const HeroSection = () => {
         const iframe = document.getElementById('youtube-player');
         if (iframe) {
           const currentSrc = iframe.src;
-          const newSrc = currentSrc.includes('autoplay=1') ? currentSrc : currentSrc + '&autoplay=1';
+          const newSrc = currentSrc.includes('autoplay=1')
+            ? currentSrc
+            : currentSrc + '&autoplay=1';
           iframe.src = newSrc;
           setShowVideoOverlay(false);
         }
@@ -103,9 +105,18 @@ const HeroSection = () => {
     }
   };
   const quickBenefits = [
-    { icon: <CheckCircle className="w-5 h-5" />, text: "100% digitale Verwaltung" },
-    { icon: <Clock className="w-5 h-5" />, text: "Vollautomatisierte Prozesse" },
-    { icon: <Shield className="w-5 h-5" />, text: "DSGVO-konform & rechtssicher" }
+    {
+      icon: <CheckCircle className="w-5 h-5" />,
+      text: '100% digitale Verwaltung',
+    },
+    {
+      icon: <Clock className="w-5 h-5" />,
+      text: 'Vollautomatisierte Prozesse',
+    },
+    {
+      icon: <Shield className="w-5 h-5" />,
+      text: 'DSGVO-konform & rechtssicher',
+    },
   ];
 
   return (
@@ -114,23 +125,45 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         {/* Animated geometric SVG patterns */}
         <div className="absolute inset-0 opacity-[0.07]">
-          <svg className="absolute top-20 right-0 w-96 h-96 animate-pulse" viewBox="0 0 400 400">
-            <polygon points="200,50 350,150 350,250 200,350 50,250 50,150" 
-                     fill="none" stroke="white" strokeWidth="2"/>
-            <polygon points="150,100 250,100 300,173 250,247 150,247 100,173" 
-                     fill="none" stroke="white" strokeWidth="1"/>
+          <svg
+            className="absolute top-20 right-0 w-96 h-96 animate-pulse"
+            viewBox="0 0 400 400"
+          >
+            <polygon
+              points="200,50 350,150 350,250 200,350 50,250 50,150"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+            />
+            <polygon
+              points="150,100 250,100 300,173 250,247 150,247 100,173"
+              fill="none"
+              stroke="white"
+              strokeWidth="1"
+            />
           </svg>
-          <svg className="absolute bottom-20 left-0 w-64 h-64 animate-bounce" viewBox="0 0 300 300" style={{animationDuration: '3s'}}>
-            <polygon points="150,30 270,120 270,180 150,270 30,180 30,120" 
-                     fill="none" stroke="white" strokeWidth="1"/>
+          <svg
+            className="absolute bottom-20 left-0 w-64 h-64 animate-bounce"
+            viewBox="0 0 300 300"
+            style={{ animationDuration: '3s' }}
+          >
+            <polygon
+              points="150,30 270,120 270,180 150,270 30,180 30,120"
+              fill="none"
+              stroke="white"
+              strokeWidth="1"
+            />
           </svg>
         </div>
-        
+
         {/* Geometric shapes */}
         <div className="absolute top-1/2 right-10 opacity-[0.08]">
           <svg className="w-32 h-32" viewBox="0 0 100 100">
-            <polygon points="50,5 85,25 85,75 50,95 15,75 15,25" 
-                     fill="currentColor" className="text-acencia-blue animate-float" />
+            <polygon
+              points="50,5 85,25 85,75 50,95 15,75 15,25"
+              fill="currentColor"
+              className="text-acencia-blue animate-float"
+            />
           </svg>
         </div>
       </div>
@@ -145,26 +178,28 @@ const HeroSection = () => {
                 <span>Digitale bAV-Lösung</span>
               </span>
             </div>
-            
+
             <h1 className="text-3xl lg:text-5xl font-bold text-white mb-8 leading-tight font-heading">
-              Wir machen<br />
+              Wir machen
+              <br />
               <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent animate-gradient-x">
                 bAV einfach!
               </span>
             </h1>
-            
+
             <p className="text-lg text-slate-200 mb-8 max-w-lg leading-relaxed font-body">
-              Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, 
-              digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.
+              Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten,
+              digitalen All-in-One-Plattform für die betriebliche
+              Altersvorsorge.
             </p>
-            
+
             {/* Enhanced benefits with animations */}
             <div className="space-y-4 mb-10">
               {quickBenefits.map((benefit, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="flex items-center space-x-3 group hover:translate-x-2 transition-all duration-300"
-                  style={{animationDelay: `${index * 200}ms`}}
+                  style={{ animationDelay: `${index * 200}ms` }}
                 >
                   <div className="text-orange-400 group-hover:text-orange-300 transition-colors duration-300 group-hover:scale-110 transform">
                     {benefit.icon}
@@ -177,15 +212,19 @@ const HeroSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
+              <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg group"
-                onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
+                onClick={() =>
+                  window.open(
+                    'https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/',
+                    '_blank',
+                  )
+                }
               >
                 <span>Jetzt starten</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </Button>
-
             </div>
           </div>
 
@@ -194,17 +233,16 @@ const HeroSection = () => {
             <div className="w-full max-w-lg relative group">
               {/* Video Container */}
               <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-600/50 hover:border-orange-400/50 transition-all duration-500 shadow-2xl backdrop-blur-sm relative">
-                
-                <iframe 
+                <iframe
                   id="youtube-player"
                   className="w-full h-full rounded-2xl"
-                  width="560" 
-                  height="315" 
+                  width="560"
+                  height="315"
                   src={`https://www.youtube.com/embed/Dw1XYzzPTkY?enablejsapi=1&origin=${window.location.origin}${autoplay ? '&autoplay=1' : ''}`}
-                  title="YouTube video player" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                  referrerPolicy="strict-origin-when-cross-origin" 
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                 ></iframe>
 
@@ -217,8 +255,12 @@ const HeroSection = () => {
                         <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                           <CheckCircle className="w-8 h-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">Video beendet</h3>
-                        <p className="text-slate-300 text-sm">Was möchten Sie als nächstes tun?</p>
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          Video beendet
+                        </h3>
+                        <p className="text-slate-300 text-sm">
+                          Was möchten Sie als nächstes tun?
+                        </p>
                       </div>
 
                       {/* Action Buttons */}
@@ -230,7 +272,7 @@ const HeroSection = () => {
                           <Play className="w-5 h-5" />
                           <span>Erneut ansehen</span>
                         </button>
-                        
+
                         <Link
                           to="/bav-rechtliche-grundlagen"
                           className="w-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2"
@@ -245,7 +287,7 @@ const HeroSection = () => {
 
                 {/* Video Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                
+
                 {/* Corner decorations */}
                 <div className="absolute top-4 right-4 w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
                 <div className="absolute bottom-4 left-4 w-1 h-1 bg-orange-300 rounded-full animate-ping"></div>

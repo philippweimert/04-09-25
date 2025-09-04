@@ -1,7 +1,22 @@
-import React, { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Users, Shield, TrendingUp, CheckCircle, Euro, Gift, Banknote, Lock, Clock, ArrowUp, RefreshCw, PlusCircle, Heart, User } from "lucide-react";
+import React, { useEffect } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import {
+  Users,
+  Shield,
+  TrendingUp,
+  CheckCircle,
+  Euro,
+  Gift,
+  Banknote,
+  Lock,
+  Clock,
+  ArrowUp,
+  RefreshCw,
+  PlusCircle,
+  Heart,
+  User,
+} from 'lucide-react';
 
 const DieBavPageY = () => {
   useEffect(() => {
@@ -10,72 +25,79 @@ const DieBavPageY = () => {
 
   const sections = [
     {
-      id: "vorteile",
-      title: "Vorteile",
+      id: 'vorteile',
+      title: 'Vorteile',
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-green-600",
+      color: 'from-green-500 to-green-600',
       items: [
         {
-          title: "Steuer- und sozialabgabenfreie Beiträge aus dem Bruttogehalt",
-          description: "Reduzierung der Steuerlast durch Entgeltumwandlung – mehr Netto vom Brutto",
-          icon: <Euro className="w-6 h-6" />
+          title: 'Steuer- und sozialabgabenfreie Beiträge aus dem Bruttogehalt',
+          description:
+            'Reduzierung der Steuerlast durch Entgeltumwandlung – mehr Netto vom Brutto',
+          icon: <Euro className="w-6 h-6" />,
         },
         {
-          title: "15% Arbeitgeberförderung plus zusätzliche Leistungen möglich",
-          description: "Seit 2022 gesetzlich garantierte 15% Förderung der Entgeltumwandlung - zusätzliche Arbeitgeberzuschüsse oder -beiträge erhöhen Ihre Altersvorsorge noch weiter",
-          icon: <Gift className="w-6 h-6" />
+          title: '15% Arbeitgeberförderung plus zusätzliche Leistungen möglich',
+          description:
+            'Seit 2022 gesetzlich garantierte 15% Förderung der Entgeltumwandlung - zusätzliche Arbeitgeberzuschüsse oder -beiträge erhöhen Ihre Altersvorsorge noch weiter',
+          icon: <Gift className="w-6 h-6" />,
         },
         {
-          title: "Lebenslange Rentenzahlung oder Kapitalauszahlung",
-          description: "Flexible Auszahlungsoptionen je nach persönlichen Bedürfnissen und Lebensplanung",
-          icon: <Banknote className="w-6 h-6" />
+          title: 'Lebenslange Rentenzahlung oder Kapitalauszahlung',
+          description:
+            'Flexible Auszahlungsoptionen je nach persönlichen Bedürfnissen und Lebensplanung',
+          icon: <Banknote className="w-6 h-6" />,
         },
         {
-          title: "Schutz vor Pfändung und Hartz-IV-Anrechnung",
-          description: "Ihre Altersvorsorge ist vor Zugriffen geschützt und wird nicht auf Sozialleistungen angerechnet",
-          icon: <Shield className="w-6 h-6" />
-        }
-      ]
+          title: 'Schutz vor Pfändung und Hartz-IV-Anrechnung',
+          description:
+            'Ihre Altersvorsorge ist vor Zugriffen geschützt und wird nicht auf Sozialleistungen angerechnet',
+          icon: <Shield className="w-6 h-6" />,
+        },
+      ],
     },
     {
-      id: "chancen", 
-      title: "Chancen",
+      id: 'chancen',
+      title: 'Chancen',
       icon: <ArrowUp className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-600",
+      color: 'from-blue-500 to-blue-600',
       items: [
         {
-          title: "Früher Einstieg = höhere Rente durch Zinseszinseffekt",
-          description: "Je früher Sie beginnen, desto mehr profitieren Sie von der Wirkung des Zinseszinses",
-          icon: <Clock className="w-6 h-6" />
+          title: 'Früher Einstieg = höhere Rente durch Zinseszinseffekt',
+          description:
+            'Je früher Sie beginnen, desto mehr profitieren Sie von der Wirkung des Zinseszinses',
+          icon: <Clock className="w-6 h-6" />,
         },
         {
-          title: "Ergänzung zur gesetzlichen Rente", 
-          description: "Schließen Sie die Rentenlücke und sichern Sie Ihren gewohnten Lebensstandard im Alter",
-          icon: <PlusCircle className="w-6 h-6" />
+          title: 'Ergänzung zur gesetzlichen Rente',
+          description:
+            'Schließen Sie die Rentenlücke und sichern Sie Ihren gewohnten Lebensstandard im Alter',
+          icon: <PlusCircle className="w-6 h-6" />,
         },
         {
-          title: "Flexibilität bei Anbieterwechsel oder Arbeitgeberwechsel",
-          description: "Ihre Ansprüche bleiben erhalten und können mitgenommen oder übertragen werden",
-          icon: <RefreshCw className="w-6 h-6" />
+          title: 'Flexibilität bei Anbieterwechsel oder Arbeitgeberwechsel',
+          description:
+            'Ihre Ansprüche bleiben erhalten und können mitgenommen oder übertragen werden',
+          icon: <RefreshCw className="w-6 h-6" />,
         },
         {
-          title: "Möglichkeit zur privaten Aufstockung",
-          description: "Kombination mit privaten Beiträgen für eine noch bessere Altersvorsorge möglich",
-          icon: <ArrowUp className="w-6 h-6" />
-        }
-      ]
-    }
+          title: 'Möglichkeit zur privaten Aufstockung',
+          description:
+            'Kombination mit privaten Beiträgen für eine noch bessere Altersvorsorge möglich',
+          icon: <ArrowUp className="w-6 h-6" />,
+        },
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
-      
+
       {/* Doubled spacing from header */}
       <main className="pt-56">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            
             {/* Hero Section */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
@@ -83,7 +105,8 @@ const DieBavPageY = () => {
                 Für Arbeitnehmer
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                <span className="text-acencia-orange">Sicherheit</span> für später –<br />
+                <span className="text-acencia-orange">Sicherheit</span> für
+                später –<br />
                 heute schon profitieren
               </h1>
               <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
@@ -100,12 +123,16 @@ const DieBavPageY = () => {
                 </h2>
               </div>
               <p className="text-slate-200 leading-relaxed mb-4 text-lg">
-                Nach einem langen Arbeitsleben haben Sie sich eine sorgenfreie Rente verdient. Doch die gesetzliche Rente allein 
-                reicht oft nicht aus, um den gewohnten Lebensstandard zu halten.
+                Nach einem langen Arbeitsleben haben Sie sich eine sorgenfreie
+                Rente verdient. Doch die gesetzliche Rente allein reicht oft
+                nicht aus, um den gewohnten Lebensstandard zu halten.
               </p>
               <p className="text-slate-200 leading-relaxed text-lg">
-                <strong className="text-white">Hier kommt die betriebliche Altersvorsorge ins Spiel:</strong> Eine kluge Ergänzung, 
-                die schon heute Ihre Steuerlast reduziert und später für finanzielle Sicherheit sorgt.
+                <strong className="text-white">
+                  Hier kommt die betriebliche Altersvorsorge ins Spiel:
+                </strong>{' '}
+                Eine kluge Ergänzung, die schon heute Ihre Steuerlast reduziert
+                und später für finanzielle Sicherheit sorgt.
               </p>
             </div>
 
@@ -120,20 +147,29 @@ const DieBavPageY = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="text-slate-200 leading-relaxed mb-4">
-                    Bei der betrieblichen Altersvorsorge (bAV) wird ein Teil Ihres Bruttogehalts für die Altersvorsorge verwendet. 
-                    Dieser Betrag wird <strong className="text-white">vor</strong> der Berechnung von Steuern und Sozialabgaben abgezogen.
+                    Bei der betrieblichen Altersvorsorge (bAV) wird ein Teil
+                    Ihres Bruttogehalts für die Altersvorsorge verwendet. Dieser
+                    Betrag wird <strong className="text-white">vor</strong> der
+                    Berechnung von Steuern und Sozialabgaben abgezogen.
                   </p>
                   <p className="text-slate-200 leading-relaxed mb-4">
-                    <strong className="text-acencia-orange">Das Ergebnis:</strong> Sie zahlen weniger Steuern und Sozialabgaben, 
-                    während gleichzeitig Ihre Altersvorsorge wächst.
+                    <strong className="text-acencia-orange">
+                      Das Ergebnis:
+                    </strong>{' '}
+                    Sie zahlen weniger Steuern und Sozialabgaben, während
+                    gleichzeitig Ihre Altersvorsorge wächst.
                   </p>
                 </div>
                 <div className="bg-acencia-light/30 rounded-xl p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4">Ihr Recht auf bAV</h3>
+                  <h3 className="text-lg font-semibold text-white mb-4">
+                    Ihr Recht auf bAV
+                  </h3>
                   <p className="text-slate-200 text-sm leading-relaxed">
-                    Seit 2002 hat <strong className="text-white">jeder Arbeitnehmer</strong> den gesetzlichen Anspruch auf 
-                    betriebliche Altersvorsorge durch Entgeltumwandlung. Ihr Arbeitgeber ist verpflichtet, Ihnen diese 
-                    Möglichkeit anzubieten.
+                    Seit 2002 hat{' '}
+                    <strong className="text-white">jeder Arbeitnehmer</strong>{' '}
+                    den gesetzlichen Anspruch auf betriebliche Altersvorsorge
+                    durch Entgeltumwandlung. Ihr Arbeitgeber ist verpflichtet,
+                    Ihnen diese Möglichkeit anzubieten.
                   </p>
                 </div>
               </div>
@@ -145,7 +181,9 @@ const DieBavPageY = () => {
                 <div key={section.id} className="relative">
                   {/* Section Header */}
                   <div className="flex items-center mb-8">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center text-white mr-4 shadow-lg`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center text-white mr-4 shadow-lg`}
+                    >
                       {section.icon}
                     </div>
                     <div>
@@ -158,12 +196,14 @@ const DieBavPageY = () => {
                   {/* Section Items */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {section.items.map((item, itemIndex) => (
-                      <div 
+                      <div
                         key={itemIndex}
                         className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group"
                       >
                         <div className="flex items-start space-x-4">
-                          <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                          <div
+                            className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}
+                          >
                             {item.icon}
                           </div>
                           <div className="flex-1">
@@ -187,44 +227,69 @@ const DieBavPageY = () => {
               <h2 className="text-2xl font-bold text-white mb-8 text-center">
                 💡 Berechnungsbeispiel: bAV mit 15% Arbeitgeberförderung
               </h2>
-              
+
               {/* Hauptberechnung */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
                 <div className="bg-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-white mb-4 text-center">Monatliche Beiträge</h3>
+                  <h3 className="text-lg font-bold text-white mb-4 text-center">
+                    Monatliche Beiträge
+                  </h3>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center border-b border-white/20 pb-2">
                       <span className="text-slate-200">Gesamtbeitrag bAV:</span>
-                      <span className="text-2xl font-bold text-acencia-orange">100 €</span>
+                      <span className="text-2xl font-bold text-acencia-orange">
+                        100 €
+                      </span>
                     </div>
                     <div className="flex justify-between items-center border-b border-white/20 pb-2">
-                      <span className="text-slate-200">Arbeitgeberzuschuss (15%):</span>
-                      <span className="text-xl font-bold text-green-400">+ 15 €</span>
+                      <span className="text-slate-200">
+                        Arbeitgeberzuschuss (15%):
+                      </span>
+                      <span className="text-xl font-bold text-green-400">
+                        + 15 €
+                      </span>
                     </div>
                     <div className="flex justify-between items-center border-b border-white/20 pb-2">
                       <span className="text-slate-200">Ihr Eigenbeitrag:</span>
-                      <span className="text-xl font-bold text-blue-400">85 €</span>
+                      <span className="text-xl font-bold text-blue-400">
+                        85 €
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-slate-200">Steuer-/Abgabenersparnis:</span>
-                      <span className="text-xl font-bold text-green-400">ca. 34 €</span>
+                      <span className="text-slate-200">
+                        Steuer-/Abgabenersparnis:
+                      </span>
+                      <span className="text-xl font-bold text-green-400">
+                        ca. 34 €
+                      </span>
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="bg-white/10 rounded-xl p-6">
-                  <h3 className="text-lg font-bold text-white mb-4 text-center">Ihre Nettobelastung</h3>
+                  <h3 className="text-lg font-bold text-white mb-4 text-center">
+                    Ihre Nettobelastung
+                  </h3>
                   <div className="space-y-4">
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-acencia-orange mb-2">nur 51 €</div>
-                      <div className="text-white font-semibold">weniger Netto pro Monat</div>
+                      <div className="text-4xl font-bold text-acencia-orange mb-2">
+                        nur 51 €
+                      </div>
+                      <div className="text-white font-semibold">
+                        weniger Netto pro Monat
+                      </div>
                     </div>
                     <div className="bg-acencia-light/30 rounded-lg p-4 text-center">
-                      <div className="text-sm text-slate-200 mb-2">Aufgrund der Steuerersparnis zahlen Sie effektiv:</div>
-                      <div className="text-lg font-bold text-green-400">85 € - 34 € = 51 € Nettobelastung</div>
+                      <div className="text-sm text-slate-200 mb-2">
+                        Aufgrund der Steuerersparnis zahlen Sie effektiv:
+                      </div>
+                      <div className="text-lg font-bold text-green-400">
+                        85 € - 34 € = 51 € Nettobelastung
+                      </div>
                     </div>
                     <div className="text-xs text-slate-300 text-center">
-                      *Bei einem Grenzsteuersatz von ca. 40% (Steuer + Sozialabgaben)
+                      *Bei einem Grenzsteuersatz von ca. 40% (Steuer +
+                      Sozialabgaben)
                     </div>
                   </div>
                 </div>
@@ -233,27 +298,45 @@ const DieBavPageY = () => {
               {/* Langfristige Auswirkungen */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white/10 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">100 €</div>
-                  <div className="text-white font-semibold mb-2">Gesamtbeitrag</div>
-                  <div className="text-slate-300 text-sm">monatlich in Ihre bAV</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">
+                    100 €
+                  </div>
+                  <div className="text-white font-semibold mb-2">
+                    Gesamtbeitrag
+                  </div>
+                  <div className="text-slate-300 text-sm">
+                    monatlich in Ihre bAV
+                  </div>
                   <div className="text-xs text-slate-400 mt-2">
                     (85 € Eigenbeitrag + 15 € AG-Zuschuss)
                   </div>
                 </div>
-                
+
                 <div className="bg-white/10 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">612 €</div>
-                  <div className="text-white font-semibold mb-2">Jährliche Ersparnis</div>
-                  <div className="text-slate-300 text-sm">durch AG-Zuschuss + Steuervorteile</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    612 €
+                  </div>
+                  <div className="text-white font-semibold mb-2">
+                    Jährliche Ersparnis
+                  </div>
+                  <div className="text-slate-300 text-sm">
+                    durch AG-Zuschuss + Steuervorteile
+                  </div>
                   <div className="text-xs text-slate-400 mt-2">
                     (180 € AG-Zuschuss + 408 € Steuerersparnis)
                   </div>
                 </div>
-                
+
                 <div className="bg-white/10 rounded-xl p-6 text-center">
-                  <div className="text-3xl font-bold text-acencia-orange mb-2">≈ 31.000 €</div>
-                  <div className="text-white font-semibold mb-2">Nach 20 Jahren</div>
-                  <div className="text-slate-300 text-sm">Kapital bei 2% Zinssatz</div>
+                  <div className="text-3xl font-bold text-acencia-orange mb-2">
+                    ≈ 31.000 €
+                  </div>
+                  <div className="text-white font-semibold mb-2">
+                    Nach 20 Jahren
+                  </div>
+                  <div className="text-slate-300 text-sm">
+                    Kapital bei 2% Zinssatz
+                  </div>
                   <div className="text-xs text-slate-400 mt-2">
                     Ihre Nettobelastung: nur ≈ 12.240 €
                   </div>
@@ -263,10 +346,13 @@ const DieBavPageY = () => {
               {/* Aufklärung */}
               <div className="mt-6 bg-acencia-orange/20 rounded-xl p-4 border border-orange-400/30">
                 <div className="text-center">
-                  <div className="text-white font-semibold mb-2">🎯 Das Beste für Sie:</div>
+                  <div className="text-white font-semibold mb-2">
+                    🎯 Das Beste für Sie:
+                  </div>
                   <div className="text-slate-200 text-sm">
-                    Sie bekommen eine Altersvorsorge von 31.000 €, zahlen aber netto nur 12.240 € selbst! 
-                    Der Rest kommt vom Arbeitgeberzuschuss und Ihren Steuervorteilen.
+                    Sie bekommen eine Altersvorsorge von 31.000 €, zahlen aber
+                    netto nur 12.240 € selbst! Der Rest kommt vom
+                    Arbeitgeberzuschuss und Ihren Steuervorteilen.
                   </div>
                 </div>
               </div>
@@ -278,8 +364,9 @@ const DieBavPageY = () => {
                 Starten Sie noch heute in Ihre sichere Zukunft!
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Nutzen Sie Ihr Recht auf betriebliche Altersvorsorge und profitieren Sie von steuerlichen Vorteilen. 
-                Sprechen Sie mit Ihrem Arbeitgeber oder lassen Sie sich beraten.
+                Nutzen Sie Ihr Recht auf betriebliche Altersvorsorge und
+                profitieren Sie von steuerlichen Vorteilen. Sprechen Sie mit
+                Ihrem Arbeitgeber oder lassen Sie sich beraten.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-acencia-orange px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 shadow-lg">
@@ -293,7 +380,7 @@ const DieBavPageY = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

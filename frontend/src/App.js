@@ -1,25 +1,25 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./components/Homepage";
-import AboutPage from "./components/AboutPage";
-import ServiceTeamPage from "./components/ServiceTeamPage";
-import ContactPage from "./components/ContactPage";
+import React from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homepage from './components/Homepage';
+import AboutPage from './components/AboutPage';
+import ServiceTeamPage from './components/ServiceTeamPage';
+import ContactPage from './components/ContactPage';
 
-import PrivacyPage from "./components/PrivacyPage";
-import ImprintPage from "./components/ImprintPage";
-import EmployerObligationsPage from "./components/EmployerObligationsPage";
-import AktuellesPage from "./components/AktuellesPage";
-import DieBavPage from "./components/DieBavPage";
-import DieBavPageX from "./components/DieBavPageX";
-import DieBavPageY from "./components/DieBavPageY";
-import BkvPage from "./components/BkvPage";
-import BkvPageX from "./components/BkvPageX";
-import BkvPageY from "./components/BkvPageY";
-import BuvPage from "./components/BuvPage";
-import BuvPageX from "./components/BuvPageX";
-import BuvPageY from "./components/BuvPageY";
-import { Toaster } from "./components/ui/toaster";
+import PrivacyPage from './components/PrivacyPage';
+import ImprintPage from './components/ImprintPage';
+import EmployerObligationsPage from './components/EmployerObligationsPage';
+import AktuellesPage from './components/AktuellesPage';
+import DieBavPage from './components/DieBavPage';
+import DieBavPageX from './components/DieBavPageX';
+import DieBavPageY from './components/DieBavPageY';
+import BkvPage from './components/BkvPage';
+import BkvPageX from './components/BkvPageX';
+import BkvPageY from './components/BkvPageY';
+import BuvPage from './components/BuvPage';
+import BuvPageX from './components/BuvPageX';
+import BuvPageY from './components/BuvPageY';
+import { Toaster } from './components/ui/toaster';
 
 function App() {
   return (
@@ -29,7 +29,10 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/ueber-uns/service-team" element={<ServiceTeamPage />} />
-          <Route path="/bav-rechtliche-grundlagen" element={<EmployerObligationsPage />} />
+          <Route
+            path="/bav-rechtliche-grundlagen"
+            element={<EmployerObligationsPage />}
+          />
           <Route path="/die-bav" element={<DieBavPage />} />
           <Route path="/die-bav/x" element={<DieBavPageX />} />
           <Route path="/die-bav/y" element={<DieBavPageY />} />

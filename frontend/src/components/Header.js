@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from './ui/button';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,40 +20,91 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}>
+    <header
+      className={`w-full z-50 transition-all duration-500 bg-acencia/95 backdrop-blur-lg border-b border-acencia-light/50 shadow-lg`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
         <div className="flex items-center h-20">
           {/* Logo - links positioniert */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group smooth-slide py-2">
-              <svg viewBox="0 0 2000 340" className="h-12 w-auto transition-all duration-400 group-hover:scale-105" role="img" aria-label="ACENCIA – Wir machen bAV einfach">
+              <svg
+                viewBox="0 0 2000 340"
+                className="h-12 w-auto transition-all duration-400 group-hover:scale-105"
+                role="img"
+                aria-label="ACENCIA – Wir machen bAV einfach"
+              >
                 {/* Icon: Three pill-frame rectangles */}
                 <g id="icon">
-                  <rect x="63" y="40" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
-                  <rect x="63" y="139" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
-                  <rect x="63" y="238" width="280" height="67" rx="18" ry="18" fill="none" stroke="#FFFFFF" strokeWidth="24"/>
+                  <rect
+                    x="63"
+                    y="40"
+                    width="280"
+                    height="67"
+                    rx="18"
+                    ry="18"
+                    fill="none"
+                    stroke="#FFFFFF"
+                    strokeWidth="24"
+                  />
+                  <rect
+                    x="63"
+                    y="139"
+                    width="280"
+                    height="67"
+                    rx="18"
+                    ry="18"
+                    fill="none"
+                    stroke="#FFFFFF"
+                    strokeWidth="24"
+                  />
+                  <rect
+                    x="63"
+                    y="238"
+                    width="280"
+                    height="67"
+                    rx="18"
+                    ry="18"
+                    fill="none"
+                    stroke="#FFFFFF"
+                    strokeWidth="24"
+                  />
                 </g>
-                
+
                 {/* Wordmark: ACENCIA */}
                 <g id="wordmark">
-                  <text x="390" y="30" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
-                    fontFamily: 'Tenor Sans, serif',
-                    fontSize: '235px',
-                    fontWeight: '400',
-                    letterSpacing: '0.12em',
-                    dominantBaseline: 'hanging'
-                  }}>ACENCIA</text>
+                  <text
+                    x="390"
+                    y="30"
+                    className="fill-white group-hover:fill-orange-400 transition-all duration-400"
+                    style={{
+                      fontFamily: 'Tenor Sans, serif',
+                      fontSize: '235px',
+                      fontWeight: '400',
+                      letterSpacing: '0.12em',
+                      dominantBaseline: 'hanging',
+                    }}
+                  >
+                    ACENCIA
+                  </text>
                 </g>
-                
+
                 {/* Tagline: WIR MACHEN BAV EINFACH */}
                 <g id="tagline">
-                  <text x="390" y="255" className="fill-white group-hover:fill-orange-400 transition-all duration-400" style={{
-                    fontFamily: 'Tenor Sans, serif',
-                    fontSize: '65px',
-                    fontWeight: '400',
-                    letterSpacing: '0.25em',
-                    dominantBaseline: 'hanging'
-                  }}>WIR MACHEN BAV EINFACH</text>
+                  <text
+                    x="390"
+                    y="255"
+                    className="fill-white group-hover:fill-orange-400 transition-all duration-400"
+                    style={{
+                      fontFamily: 'Tenor Sans, serif',
+                      fontSize: '65px',
+                      fontWeight: '400',
+                      letterSpacing: '0.25em',
+                      dominantBaseline: 'hanging',
+                    }}
+                  >
+                    WIR MACHEN BAV EINFACH
+                  </text>
                 </g>
               </svg>
             </Link>
@@ -66,140 +117,156 @@ const Header = () => {
           <div className="hidden md:flex items-center">
             <div className="flex items-center space-x-16 mr-8">
               {/* bAV Dropdown */}
-              <div 
+              <div
                 className="relative group"
                 onMouseEnter={() => setIsBavDropdownOpen(true)}
                 onMouseLeave={() => setIsBavDropdownOpen(false)}
               >
-                <Link 
-                  to="/die-bav" 
+                <Link
+                  to="/die-bav"
                   className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
                 >
                   <span>bAV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
                 </Link>
-                
+
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
-                  isBavDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
-                  <Link 
-                    to="/die-bav/x" 
+                <div
+                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                    isBavDropdownOpen
+                      ? 'opacity-100 visible transform translate-y-0'
+                      : 'opacity-0 invisible transform -translate-y-2'
+                  }`}
+                >
+                  <Link
+                    to="/die-bav/x"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     Für Unternehmen
                   </Link>
-                  <Link 
-                    to="/die-bav/y" 
+                  <Link
+                    to="/die-bav/y"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     Für Arbeitnehmer
                   </Link>
-                  <Link 
-                    to="/die-bav/aktuelles" 
+                  <Link
+                    to="/die-bav/aktuelles"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     Aktuelles
                   </Link>
                 </div>
               </div>
-              
+
               {/* bKV Dropdown */}
-              <div 
+              <div
                 className="relative group"
                 onMouseEnter={() => setIsBkvDropdownOpen(true)}
                 onMouseLeave={() => setIsBkvDropdownOpen(false)}
               >
-                <Link 
-                  to="/bkv" 
+                <Link
+                  to="/bkv"
                   className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
                 >
                   <span>bKV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
                 </Link>
-                
+
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
-                  isBkvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
-                  <Link 
-                    to="/bkv/x" 
+                <div
+                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                    isBkvDropdownOpen
+                      ? 'opacity-100 visible transform translate-y-0'
+                      : 'opacity-0 invisible transform -translate-y-2'
+                  }`}
+                >
+                  <Link
+                    to="/bkv/x"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     bKV Option X
                   </Link>
-                  <Link 
-                    to="/bkv/y" 
+                  <Link
+                    to="/bkv/y"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     bKV Option Y
                   </Link>
                 </div>
               </div>
-              
+
               {/* bUV Dropdown */}
-              <div 
+              <div
                 className="relative group"
                 onMouseEnter={() => setIsBuvDropdownOpen(true)}
                 onMouseLeave={() => setIsBuvDropdownOpen(false)}
               >
-                <Link 
-                  to="/buv" 
+                <Link
+                  to="/buv"
                   className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
                 >
                   <span>bUV</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
                 </Link>
-                
+
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
-                  isBuvDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
-                  <Link 
-                    to="/buv/x" 
+                <div
+                  className={`absolute top-full left-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                    isBuvDropdownOpen
+                      ? 'opacity-100 visible transform translate-y-0'
+                      : 'opacity-0 invisible transform -translate-y-2'
+                  }`}
+                >
+                  <Link
+                    to="/buv/x"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     bUV Option X
                   </Link>
-                  <Link 
-                    to="/buv/y" 
+                  <Link
+                    to="/buv/y"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     bUV Option Y
                   </Link>
                 </div>
               </div>
-              
+
               {/* über uns Dropdown in der Hauptnavigation */}
-              <div 
+              <div
                 className="relative group"
                 onMouseEnter={() => setIsAboutDropdownOpen(true)}
                 onMouseLeave={() => setIsAboutDropdownOpen(false)}
               >
-                <Link 
-                  to="/ueber-uns" 
+                <Link
+                  to="/ueber-uns"
                   className="relative text-white hover:text-orange-400 transition-all duration-400 font-medium group py-2 smooth-slide text-body flex items-center"
                 >
                   <span>über uns</span>
                   <ChevronDown className="absolute -top-1 -right-3 h-4 w-4 transition-transform duration-200 pointer-events-none" />
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-400 to-orange-500 group-hover:w-full transition-all duration-400 ease-smooth"></div>
                 </Link>
-                
+
                 {/* Dropdown Menu */}
-                <div className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
-                  isAboutDropdownOpen ? 'opacity-100 visible transform translate-y-0' : 'opacity-0 invisible transform -translate-y-2'
-                }`}>
-                  <Link 
-                    to="/ueber-uns/service-team" 
+                <div
+                  className={`absolute top-full right-0 mt-2 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 transition-all duration-300 ${
+                    isAboutDropdownOpen
+                      ? 'opacity-100 visible transform translate-y-0'
+                      : 'opacity-0 invisible transform -translate-y-2'
+                  }`}
+                >
+                  <Link
+                    to="/ueber-uns/service-team"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     Service-Team
                   </Link>
-                  <Link 
-                    to="/kontakt" 
+                  <Link
+                    to="/kontakt"
                     className="block px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
                   >
                     Kontakt
@@ -207,15 +274,20 @@ const Header = () => {
                 </div>
               </div>
             </div>
-          
+
             {/* Login Portal + Support als Anker rechts */}
             <div className="flex items-center flex-shrink-0">
               {/* Login + Support vertical stack */}
               <div className="flex flex-col items-center space-y-1">
                 {/* Login Portal */}
-                <Button 
+                <Button
                   className="btn-primary bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-400 hover:scale-105 shadow-md text-sm"
-                  onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      'https://www.smartcloudservices.de/acencia/login/login.do',
+                      '_blank',
+                    )
+                  }
                 >
                   Login Portal
                 </Button>
@@ -223,11 +295,11 @@ const Header = () => {
                 {/* Support Tooltip darunter */}
                 <div className="tooltip-wrapper relative">
                   <ul className="tooltip-container">
-                    <li style={{"--i": "1.1s"}} className="nav-link group">
+                    <li style={{ '--i': '1.1s' }} className="nav-link group">
                       <div className="tooltip-tab flex items-center space-x-1 text-white hover:text-orange-400 transition-colors cursor-pointer px-2 py-1">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          style={{fill: "none"}}
+                          style={{ fill: 'none' }}
                           fill="none"
                           viewBox="0 0 16 16"
                           height="12"
@@ -245,7 +317,10 @@ const Header = () => {
                       <div className="tooltip absolute top-full right-0 mt-1 w-48 bg-acencia-light/95 backdrop-blur-lg rounded-xl shadow-xl border border-acencia-light/50 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                         <ul className="tooltip-menu-with-icon">
                           <li className="tooltip-link">
-                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200" href="tel:+49-6754-123456">
+                            <a
+                              className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                              href="tel:+49-6754-123456"
+                            >
                               <svg
                                 aria-hidden="true"
                                 role="img"
@@ -287,7 +362,10 @@ const Header = () => {
                             </div>
                           </li>
                           <li className="tooltip-link">
-                            <a className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200" href="mailto:info@acencia.de">
+                            <a
+                              className="tooltip-links flex items-center space-x-3 px-4 py-3 text-white hover:text-orange-400 hover:bg-white/5 transition-colors duration-200"
+                              href="mailto:info@acencia.de"
+                            >
                               <svg
                                 aria-hidden="true"
                                 role="img"
@@ -297,7 +375,7 @@ const Header = () => {
                                 xmlns="http://www.w3.org/2000/svg"
                               >
                                 <path
-                                  style={{fill: "#fff"}}
+                                  style={{ fill: '#fff' }}
                                   d="M17.9 0H.3a.3.3 0 0 0-.3.3v12.742a.3.3 0 0 0 .3.3h17.6a.3.3 0 0 0 .3-.3V.3a.3.3 0 0 0-.3-.3M.85.5h16.554L9.101 6.364Zm6.983 5.576 1.124.799a.25.25 0 0 0 .29 0l1.527-1.08-.133.13 6.719 6.917H.956ZM.5 12.59V.867l6.918 4.915Zm10.533-6.978L17.7.902v11.574ZM.539.5.5.554V.5Z"
                                 ></path>
                               </svg>
@@ -327,9 +405,11 @@ const Header = () => {
         </div>
 
         {/* Enhanced Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'
-        }`}>
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
           <div className="px-2 pt-2 pb-6 space-y-1 bg-acencia-light/95 backdrop-blur-lg rounded-2xl mt-4 border border-acencia-light/50 shadow-xl">
             {/* bAV with submenu in mobile */}
             <div className="space-y-1">
@@ -365,7 +445,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
+
             {/* bKV with submenu in mobile */}
             <div className="space-y-1">
               <Link
@@ -393,7 +473,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
+
             {/* bUV with submenu in mobile */}
             <div className="space-y-1">
               <Link
@@ -421,7 +501,7 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
+
             {/* über uns with submenu in mobile */}
             <div className="space-y-1">
               <Link
@@ -448,12 +528,15 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            
+
             <div className="pt-2">
-              <Button 
+              <Button
                 className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl py-3 transition-all duration-300"
                 onClick={() => {
-                  window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank');
+                  window.open(
+                    'https://www.smartcloudservices.de/acencia/login/login.do',
+                    '_blank',
+                  );
                   setIsMenuOpen(false);
                 }}
               >

@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Umbrella, Shield } from "lucide-react";
+import React, { useEffect } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import { Umbrella, Shield } from 'lucide-react';
 
 const BuvPageY = () => {
   useEffect(() => {
@@ -11,12 +11,11 @@ const BuvPageY = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
-      
+
       {/* Doubled spacing from header */}
       <main className="pt-56">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            
             {/* Hero Section */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
@@ -40,13 +39,14 @@ const BuvPageY = () => {
                 </h2>
               </div>
               <p className="text-slate-200 leading-relaxed">
-                Diese Seite wird mit spezifischen Informationen zu bUV Option Y gefüllt.
+                Diese Seite wird mit spezifischen Informationen zu bUV Option Y
+                gefüllt.
               </p>
             </div>
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

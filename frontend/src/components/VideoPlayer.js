@@ -1,7 +1,14 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Play, Pause, Volume2, VolumeX, Maximize, RotateCcw } from "lucide-react";
+import React, { useState, useRef, useEffect } from 'react';
+import {
+  Play,
+  Pause,
+  Volume2,
+  VolumeX,
+  Maximize,
+  RotateCcw,
+} from 'lucide-react';
 
-const VideoPlayer = ({ src, poster, title, description, className = "" }) => {
+const VideoPlayer = ({ src, poster, title, description, className = '' }) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -93,15 +100,15 @@ const VideoPlayer = ({ src, poster, title, description, className = "" }) => {
   };
 
   const formatTime = (time) => {
-    if (isNaN(time)) return "0:00";
-    
+    if (isNaN(time)) return '0:00';
+
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
   return (
-    <div 
+    <div
       className={`relative group bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden ${className}`}
       onMouseEnter={() => setShowControls(true)}
       onMouseLeave={() => setShowControls(isPlaying ? false : true)}
@@ -120,7 +127,7 @@ const VideoPlayer = ({ src, poster, title, description, className = "" }) => {
       </video>
 
       {/* Custom Controls Overlay */}
-      <div 
+      <div
         className={`absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 transition-opacity duration-300 ${
           showControls ? 'opacity-100' : 'opacity-0'
         }`}
@@ -142,11 +149,11 @@ const VideoPlayer = ({ src, poster, title, description, className = "" }) => {
         {/* Bottom Controls */}
         <div className="absolute bottom-0 left-0 right-0 p-4">
           {/* Progress Bar */}
-          <div 
+          <div
             className="w-full h-1 bg-white/20 rounded-full cursor-pointer mb-3 hover:h-2 transition-all duration-200"
             onClick={handleProgressClick}
           >
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-orange-400 to-orange-500 rounded-full transition-all duration-200"
               style={{ width: `${progress}%` }}
             ></div>
@@ -159,14 +166,22 @@ const VideoPlayer = ({ src, poster, title, description, className = "" }) => {
                 onClick={togglePlay}
                 className="text-white hover:text-orange-400 transition-colors duration-200"
               >
-                {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+                {isPlaying ? (
+                  <Pause className="w-5 h-5" />
+                ) : (
+                  <Play className="w-5 h-5" />
+                )}
               </button>
 
               <button
                 onClick={toggleMute}
                 className="text-white hover:text-orange-400 transition-colors duration-200"
               >
-                {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+                {isMuted ? (
+                  <VolumeX className="w-5 h-5" />
+                ) : (
+                  <Volume2 className="w-5 h-5" />
+                )}
               </button>
 
               <span className="text-white text-sm font-medium">

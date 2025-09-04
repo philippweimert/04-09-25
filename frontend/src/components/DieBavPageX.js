@@ -1,7 +1,20 @@
-import React, { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Building2, AlertTriangle, Target, TrendingUp, CheckCircle, Users, Shield, FileText, Lightbulb, Award, DollarSign, Heart } from "lucide-react";
+import React, { useEffect } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import {
+  Building2,
+  AlertTriangle,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Users,
+  Shield,
+  FileText,
+  Lightbulb,
+  Award,
+  DollarSign,
+  Heart,
+} from 'lucide-react';
 
 const DieBavPageX = () => {
   useEffect(() => {
@@ -10,112 +23,130 @@ const DieBavPageX = () => {
 
   const sections = [
     {
-      id: "pflichten",
-      title: "Pflichten",
+      id: 'pflichten',
+      title: 'Pflichten',
       icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-red-600",
+      color: 'from-red-500 to-red-600',
       items: [
         {
-          title: "Gesetzliche Verpflichtung zur Entgeltumwandlung (§ 1a BetrAVG)",
-          description: "Überblick über die rechtlichen Grundlagen und Ansprüche der Mitarbeitenden"
+          title:
+            'Gesetzliche Verpflichtung zur Entgeltumwandlung (§ 1a BetrAVG)',
+          description:
+            'Überblick über die rechtlichen Grundlagen und Ansprüche der Mitarbeitenden',
         },
         {
-          title: "Informationspflicht gegenüber Mitarbeitenden",
-          description: "Aufklärung über Möglichkeiten und Bedingungen der betrieblichen Altersvorsorge"
+          title: 'Informationspflicht gegenüber Mitarbeitenden',
+          description:
+            'Aufklärung über Möglichkeiten und Bedingungen der betrieblichen Altersvorsorge',
         },
         {
-          title: "Dokumentations- und Nachweispflichten",
-          description: "Führung ordnungsgemäßer Unterlagen und Nachweis der Compliance"
+          title: 'Dokumentations- und Nachweispflichten',
+          description:
+            'Führung ordnungsgemäßer Unterlagen und Nachweis der Compliance',
         },
         {
-          title: "Pflicht zur 15% Förderung seit 2022",
-          description: "Gesetzliche Verpflichtung zur Bezuschussung der Entgeltumwandlung mit mindestens 15%"
-        }
-      ]
+          title: 'Pflicht zur 15% Förderung seit 2022',
+          description:
+            'Gesetzliche Verpflichtung zur Bezuschussung der Entgeltumwandlung mit mindestens 15%',
+        },
+      ],
     },
     {
-      id: "herausforderungen",
-      title: "Herausforderungen",
+      id: 'herausforderungen',
+      title: 'Herausforderungen',
       icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-orange-500 to-orange-600",
+      color: 'from-orange-500 to-orange-600',
       items: [
         {
-          title: "Komplexität der Produktlandschaft und Anbieterwahl",
-          description: "Navigation durch vielfältige Angebote und Tarife verschiedener Versicherer"
+          title: 'Komplexität der Produktlandschaft und Anbieterwahl',
+          description:
+            'Navigation durch vielfältige Angebote und Tarife verschiedener Versicherer',
         },
         {
-          title: "Verwaltungsaufwand und Integration in bestehende HR-Prozesse",
-          description: "Einbindung in Lohn- und Gehaltsabrechnung sowie bestehende Systeme"
+          title: 'Verwaltungsaufwand und Integration in bestehende HR-Prozesse',
+          description:
+            'Einbindung in Lohn- und Gehaltsabrechnung sowie bestehende Systeme',
         },
         {
-          title: "Kommunikation und Akzeptanz bei Mitarbeitenden",
-          description: "Vermittlung der Vorteile und Aufbau von Vertrauen in die bAV-Lösung"
+          title: 'Kommunikation und Akzeptanz bei Mitarbeitenden',
+          description:
+            'Vermittlung der Vorteile und Aufbau von Vertrauen in die bAV-Lösung',
         },
         {
-          title: "Umgang mit Altverträgen und bestehenden Zusagen",
-          description: "Integration vorhandener Verträge und Berücksichtigung erworbener Ansprüche"
-        }
-      ]
+          title: 'Umgang mit Altverträgen und bestehenden Zusagen',
+          description:
+            'Integration vorhandener Verträge und Berücksichtigung erworbener Ansprüche',
+        },
+      ],
     },
     {
-      id: "chancen",
-      title: "Chancen",
+      id: 'chancen',
+      title: 'Chancen',
       icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-green-600",
+      color: 'from-green-500 to-green-600',
       items: [
         {
-          title: "Mitarbeiterbindung und -gewinnung durch attraktive Zusatzleistungen",
-          description: "Stärkung der Arbeitgeberattraktivität im Wettbewerb um Fachkräfte"
+          title:
+            'Mitarbeiterbindung und -gewinnung durch attraktive Zusatzleistungen',
+          description:
+            'Stärkung der Arbeitgeberattraktivität im Wettbewerb um Fachkräfte',
         },
         {
-          title: "Imagegewinn als verantwortungsbewusster Arbeitgeber",
-          description: "Positionierung als sozial verantwortliches Unternehmen"
+          title: 'Imagegewinn als verantwortungsbewusster Arbeitgeber',
+          description: 'Positionierung als sozial verantwortliches Unternehmen',
         },
         {
-          title: "Steuerliche Vorteile und Sozialabgabenersparnis",
-          description: "Optimierung der Gesamtkosten durch steuerliche Begünstigungen"
+          title: 'Steuerliche Vorteile und Sozialabgabenersparnis',
+          description:
+            'Optimierung der Gesamtkosten durch steuerliche Begünstigungen',
         },
         {
-          title: "Möglichkeit zur individuellen Gestaltung (z. B. Matching Contributions)",
-          description: "Flexible Anpassung an Unternehmensstrategie und Mitarbeiterbedürfnisse"
-        }
-      ]
+          title:
+            'Möglichkeit zur individuellen Gestaltung (z. B. Matching Contributions)',
+          description:
+            'Flexible Anpassung an Unternehmensstrategie und Mitarbeiterbedürfnisse',
+        },
+      ],
     },
     {
-      id: "vorteile",
-      title: "Vorteile",
+      id: 'vorteile',
+      title: 'Vorteile',
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-blue-600",
+      color: 'from-blue-500 to-blue-600',
       items: [
         {
-          title: "Geringere Fluktuation und höhere Zufriedenheit im Team",
-          description: "Messbare Verbesserung der Mitarbeiterbindung und Arbeitsplatzzufriedenheit"
+          title: 'Geringere Fluktuation und höhere Zufriedenheit im Team',
+          description:
+            'Messbare Verbesserung der Mitarbeiterbindung und Arbeitsplatzzufriedenheit',
         },
         {
-          title: "Wettbewerbsvorteil gegenüber anderen Arbeitgebern",
-          description: "Differenzierung im Arbeitsmarkt durch zusätzliche Sozialleistungen"
+          title: 'Wettbewerbsvorteil gegenüber anderen Arbeitgebern',
+          description:
+            'Differenzierung im Arbeitsmarkt durch zusätzliche Sozialleistungen',
         },
         {
-          title: "Kosteneffiziente Möglichkeit zur Gehaltsoptimierung",
-          description: "Erhöhung der Nettoentlohnung ohne zusätzliche Arbeitgeberkosten"
+          title: 'Kosteneffiziente Möglichkeit zur Gehaltsoptimierung',
+          description:
+            'Erhöhung der Nettoentlohnung ohne zusätzliche Arbeitgeberkosten',
         },
         {
-          title: "Beitrag zur Altersvorsorge der Mitarbeitenden ohne hohe Zusatzkosten",
-          description: "Soziale Verantwortung mit wirtschaftlich sinnvoller Umsetzung"
-        }
-      ]
-    }
+          title:
+            'Beitrag zur Altersvorsorge der Mitarbeitenden ohne hohe Zusatzkosten',
+          description:
+            'Soziale Verantwortung mit wirtschaftlich sinnvoller Umsetzung',
+        },
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
-      
+
       {/* Doubled spacing from header */}
       <main className="pt-56">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            
             {/* Hero Section */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
@@ -123,7 +154,8 @@ const DieBavPageX = () => {
                 Für Unternehmen
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                Betriebliche Altersvorsorge für <span className="text-acencia-orange">Unternehmen</span>
+                Betriebliche Altersvorsorge für{' '}
+                <span className="text-acencia-orange">Unternehmen</span>
               </h1>
               <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
                 Warum bAV heute wichtiger ist denn je
@@ -139,14 +171,22 @@ const DieBavPageX = () => {
                 </h2>
               </div>
               <p className="text-slate-200 leading-relaxed mb-4">
-                In Zeiten des demografischen Wandels und des Fachkräftemangels wird die betriebliche Altersvorsorge zu einem 
-                entscheidenden Faktor im Wettbewerb um qualifizierte Mitarbeitende. Unternehmen, die eine durchdachte bAV-Strategie 
-                implementieren, verschaffen sich nicht nur einen Wettbewerbsvorteil, sondern übernehmen auch gesellschaftliche Verantwortung.
+                In Zeiten des demografischen Wandels und des Fachkräftemangels
+                wird die betriebliche Altersvorsorge zu einem entscheidenden
+                Faktor im Wettbewerb um qualifizierte Mitarbeitende.
+                Unternehmen, die eine durchdachte bAV-Strategie implementieren,
+                verschaffen sich nicht nur einen Wettbewerbsvorteil, sondern
+                übernehmen auch gesellschaftliche Verantwortung.
               </p>
               <p className="text-slate-200 leading-relaxed">
-                <strong className="text-white">Gesetzliche Rahmenbedingungen:</strong> Die Berücksichtigung aktueller Gesetze und Verordnungen 
-                ist nicht nur eine rechtliche Notwendigkeit, sondern auch ein Zeichen für verantwortungsvolle Unternehmensführung. 
-                Eine professionell gestaltete bAV stärkt das Vertrauen der Mitarbeitenden und das Image des Unternehmens.
+                <strong className="text-white">
+                  Gesetzliche Rahmenbedingungen:
+                </strong>{' '}
+                Die Berücksichtigung aktueller Gesetze und Verordnungen ist
+                nicht nur eine rechtliche Notwendigkeit, sondern auch ein
+                Zeichen für verantwortungsvolle Unternehmensführung. Eine
+                professionell gestaltete bAV stärkt das Vertrauen der
+                Mitarbeitenden und das Image des Unternehmens.
               </p>
             </div>
 
@@ -156,7 +196,9 @@ const DieBavPageX = () => {
                 <div key={section.id} className="relative">
                   {/* Section Header */}
                   <div className="flex items-center mb-8">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center text-white mr-4 shadow-lg`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center text-white mr-4 shadow-lg`}
+                    >
                       {section.icon}
                     </div>
                     <div>
@@ -169,7 +211,7 @@ const DieBavPageX = () => {
                   {/* Section Items */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {section.items.map((item, itemIndex) => (
-                      <div 
+                      <div
                         key={itemIndex}
                         className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group"
                       >
@@ -199,8 +241,9 @@ const DieBavPageX = () => {
                 Bereit für den nächsten Schritt?
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Lassen Sie uns gemeinsam die optimale bAV-Lösung für Ihr Unternehmen entwickeln. 
-                Unsere Experten beraten Sie individuell und unverbindlich.
+                Lassen Sie uns gemeinsam die optimale bAV-Lösung für Ihr
+                Unternehmen entwickeln. Unsere Experten beraten Sie individuell
+                und unverbindlich.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-acencia-orange px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 shadow-lg">
@@ -214,7 +257,7 @@ const DieBavPageX = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

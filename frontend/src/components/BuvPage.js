@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import { Umbrella, Shield, Users } from "lucide-react";
+import React, { useEffect } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import { Umbrella, Shield, Users } from 'lucide-react';
 
 const BuvPage = () => {
   useEffect(() => {
@@ -11,12 +11,11 @@ const BuvPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-acencia via-acencia to-acencia-light">
       <Header />
-      
+
       {/* Doubled spacing from header */}
       <main className="pt-56">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            
             {/* Hero Section */}
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-6 py-3 bg-acencia-orange rounded-full text-white text-sm font-medium mb-8">
@@ -24,10 +23,12 @@ const BuvPage = () => {
                 Betriebliche Unfallversicherung
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
-                <span className="text-acencia-orange">bUV</span> - Betriebliche Unfallversicherung
+                <span className="text-acencia-orange">bUV</span> - Betriebliche
+                Unfallversicherung
               </h1>
               <p className="text-lg text-slate-200 leading-relaxed max-w-4xl mx-auto">
-                Umfassender Schutz für Ihre Mitarbeitenden - Sicherheit über die gesetzliche Unfallversicherung hinaus
+                Umfassender Schutz für Ihre Mitarbeitenden - Sicherheit über die
+                gesetzliche Unfallversicherung hinaus
               </p>
             </div>
 
@@ -40,16 +41,25 @@ const BuvPage = () => {
                 </h2>
               </div>
               <p className="text-slate-200 leading-relaxed mb-6">
-                Diese Seite wird mit umfassenden Informationen zur betrieblichen Unfallversicherung gefüllt.
+                Diese Seite wird mit umfassenden Informationen zur betrieblichen
+                Unfallversicherung gefüllt.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-white/5 rounded-xl p-4">
-                  <h3 className="text-white font-semibold mb-2">Für Arbeitgeber</h3>
-                  <p className="text-slate-300 text-sm">Zusätzlicher Schutz und Vorteile</p>
+                  <h3 className="text-white font-semibold mb-2">
+                    Für Arbeitgeber
+                  </h3>
+                  <p className="text-slate-300 text-sm">
+                    Zusätzlicher Schutz und Vorteile
+                  </p>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4">
-                  <h3 className="text-white font-semibold mb-2">Für Arbeitnehmer</h3>
-                  <p className="text-slate-300 text-sm">Erweiterte Absicherung</p>
+                  <h3 className="text-white font-semibold mb-2">
+                    Für Arbeitnehmer
+                  </h3>
+                  <p className="text-slate-300 text-sm">
+                    Erweiterte Absicherung
+                  </p>
                 </div>
                 <div className="bg-white/5 rounded-xl p-4">
                   <h3 className="text-white font-semibold mb-2">Leistungen</h3>
@@ -64,7 +74,8 @@ const BuvPage = () => {
                 Interesse an betrieblicher Unfallversicherung?
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Lassen Sie sich beraten, wie die bUV Ihre Mitarbeitenden optimal schützen kann.
+                Lassen Sie sich beraten, wie die bUV Ihre Mitarbeitenden optimal
+                schützen kann.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-acencia-orange px-8 py-3 rounded-xl font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 shadow-lg">
@@ -78,7 +89,7 @@ const BuvPage = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );
